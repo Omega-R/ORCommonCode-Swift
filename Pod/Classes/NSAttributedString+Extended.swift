@@ -10,7 +10,7 @@ import Foundation
 
 extension NSAttributedString {
     
-    static func or_stringWithHyperlinks(original: String, attributes: [String : AnyObject] = [:]) -> NSAttributedString {
+    public static func or_stringWithHyperlinks(original: String, attributes: [String : AnyObject] = [:]) -> NSAttributedString {
         let matches = original.or_matchesForRegexInText("\\[(.*?)\\]")
         if ((matches.count % 2) != 0 || matches.count == 0) {
             return NSAttributedString()

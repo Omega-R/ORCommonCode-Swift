@@ -10,13 +10,13 @@ import Foundation
 
 extension String {
     
-    var or_length: Int {
+    public var or_length: Int {
         get {
             return self.characters.count
         }
     }
     
-    func or_estimatedSize(font: UIFont, maxWidth: CGFloat?, maxHeight: CGFloat?) -> CGSize {
+   public func or_estimatedSize(font: UIFont, maxWidth: CGFloat?, maxHeight: CGFloat?) -> CGSize {
         
         let fontAttributes: [String : AnyObject] = [NSFontAttributeName : font];
         let maxSize: CGSize = CGSize(width: maxWidth ?? CGFloat.max, height: maxHeight ?? CGFloat.max);
@@ -28,21 +28,21 @@ extension String {
         return boundingRect.size;
     }
     
-    static func or_uniqueString() -> String {
+    public static func or_uniqueString() -> String {
         let uuid: String = NSUUID().UUIDString;
         
         return uuid.stringByTrimmingCharactersInSet(NSCharacterSet(charactersInString: "-"));
     }
     
-    static func or_localized(keyStr: String) -> String {
+    public static func or_localized(keyStr: String) -> String {
         return NSLocalizedString(keyStr, comment: "")
     }
     
-    func or_isFileURL() -> Bool {
+    public func or_isFileURL() -> Bool {
         return self.or_matchesForRegexInText("^file:///").count > 0
     }
     
-    func or_repeatString(n:Int) -> String {
+    public func or_repeatString(n:Int) -> String {
         if (n < 1) {
             return ""
         }
@@ -54,12 +54,12 @@ extension String {
         return result
     }
     
-    mutating func or_appendToChain(other: String?, separator: String = " ") {
+    public mutating func or_appendToChain(other: String?, separator: String = " ") {
         guard let strToAdd = other else { return }
         self = (self.or_length > 0) ? "\(self)\(separator)\(strToAdd)" : strToAdd
     }
     
-    func or_matchesForRegexInText(regex: String!) -> [NSTextCheckingResult] {
+    public func or_matchesForRegexInText(regex: String!) -> [NSTextCheckingResult] {
         do {
             let regex = try NSRegularExpression(pattern: regex, options: [])
             let nsString = self as NSString
@@ -71,12 +71,12 @@ extension String {
         }
     }
     
-    func or_withoutFirstAndLastChars() -> String {
+    public func or_withoutFirstAndLastChars() -> String {
         let result = String(self.characters.dropFirst().dropLast())
         return result
     }
     
-    func or_sizeWithFont(font: UIFont, maxWidth: CGFloat = CGFloat.max) -> CGSize {
+    public func or_sizeWithFont(font: UIFont, maxWidth: CGFloat = CGFloat.max) -> CGSize {
         let size = NSString(string: self).boundingRectWithSize(CGSizeMake(maxWidth, CGFloat.max),
                                                                options: .UsesLineFragmentOrigin,
                                                                attributes: [NSFontAttributeName: font],
@@ -85,7 +85,7 @@ extension String {
         return result
     }
     
-    func or_substringWithRange(range: NSRange) -> String {
+    public func or_substringWithRange(range: NSRange) -> String {
         let startIndex = self.startIndex.advancedBy(range.location)
         let endIndex = startIndex.advancedBy(range.length)
         let substringRange = startIndex ..< endIndex
