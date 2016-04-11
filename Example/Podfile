@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'ORCommonCode-Swift_Example', :exclusive => true do
+  pod 'ORCommonCode-Swift', :path => '../'
+end
+
+target 'ORCommonCode-Swift_Tests', :exclusive => true do
+  pod 'ORCommonCode-Swift', :path => '../'
+
+  
+end
