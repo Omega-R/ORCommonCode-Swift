@@ -1,4 +1,6 @@
-source 'https://github.com/CocoaPods/Specs.git'
+source 'https://bitbucket.org/omegarinc/cocoapods-specs.git' # private spec repo
+source 'https://github.com/CocoaPods/Specs.git' # master cocoapods spec repo
+
 use_frameworks!
 
 target 'ORCommonCode-Swift_Example', :exclusive => true do
