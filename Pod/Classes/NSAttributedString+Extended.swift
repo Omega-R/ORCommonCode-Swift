@@ -10,7 +10,7 @@ import Foundation
 
 extension NSAttributedString {
     
-    static func or_stringWithText(text: String, textColor: UIColor?, font: UIFont?, textAlign: NSTextAlignment = NSTextAlignment.Center, lineBreakMode: NSLineBreakMode? = NSLineBreakMode.ByWordWrapping, tightenLineSpacing: Bool = false, kerningValue: CGFloat?) -> NSAttributedString {
+    public static func or_stringWithText(text: String, textColor: UIColor?, font: UIFont?, textAlign: NSTextAlignment = NSTextAlignment.Center, lineBreakMode: NSLineBreakMode? = NSLineBreakMode.ByWordWrapping, tightenLineSpacing: Bool = false, kerningValue: CGFloat?) -> NSAttributedString {
         let paragraphStyle = NSMutableParagraphStyle()
         
         if lineBreakMode != nil {
