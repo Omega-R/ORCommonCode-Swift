@@ -1,14 +1,40 @@
 //
 //  NSAttributedString+Extended.swift
-//  InMusik Explorer
+//  Pods
 //
 //  Created by Alexander Kurbanov on 3/30/16.
-//  Copyright © 2016 Stone Valley Partners. All rights reserved.
+//
 //
 
 import Foundation
 
 extension NSAttributedString {
+    
+    static func or_stringWithText(text: String, textColor: UIColor?, font: UIFont?, textAlign: NSTextAlignment = NSTextAlignment.Center, lineBreakMode: NSLineBreakMode? = NSLineBreakMode.ByWordWrapping, tightenLineSpacing: Bool = false, kerningValue: CGFloat?) -> NSAttributedString {
+        let paragraphStyle = NSMutableParagraphStyle()
+        
+        if lineBreakMode != nil {
+            paragraphStyle.lineBreakMode = lineBreakMode!
+        }
+        paragraphStyle.alignment = textAlign
+        paragraphStyle.lineSpacing = 0
+        var attr: [String : AnyObject] = [NSParagraphStyleAttributeName: paragraphStyle]
+        if textColor != nil {
+            attr[NSForegroundColorAttributeName] = textColor!
+        }
+        if font != nil {
+            attr[NSFontAttributeName] = font!
+        }
+        if tightenLineSpacing {
+            paragraphStyle.maximumLineHeight = font!.pointSize
+        }
+        if kerningValue != nil {
+            attr[NSKernAttributeName] = kerningValue!
+        }
+        
+        let string = NSAttributedString(string: text, attributes: attr)
+        return string
+    }
     
     public static func or_stringWithHyperlinks(original: String, attributes: [String : AnyObject] = [:]) -> NSAttributedString {
         let matches = original.or_matchesForRegexInText("\\[(.*?)\\]")
