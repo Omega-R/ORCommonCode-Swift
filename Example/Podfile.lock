@@ -1,5 +1,5 @@
 PODS:
-  - ORCommonCode-Swift (0.3.0)
+  - ORCommonCode-Swift (0.3.1)
 
 DEPENDENCIES:
   - ORCommonCode-Swift (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  ORCommonCode-Swift: 0b432c40caacce4e8a36ec8c3e57d0ee8e3fbe04
+  ORCommonCode-Swift: dcff647d4a352be674c0ba89a7ef4dca6fbb0722
 
 COCOAPODS: 0.39.0
