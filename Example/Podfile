@@ -3,11 +3,11 @@ source 'https://github.com/CocoaPods/Specs.git' # master cocoapods spec repo
 
 use_frameworks!
 
-target 'ORCommonCode-Swift_Example', :exclusive => true do
+target 'ORCommonCode-Swift_Example' do
   pod 'ORCommonCode-Swift', :path => '../'
 end
 
-target 'ORCommonCode-Swift_Tests', :exclusive => true do
+target 'ORCommonCode-Swift_Tests' do
   pod 'ORCommonCode-Swift', :path => '../'
 
   

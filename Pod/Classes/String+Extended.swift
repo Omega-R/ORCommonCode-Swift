@@ -1,5 +1,5 @@
 //
-//  NSString+Extended.swift
+//  String+Extended.swift
 //  Pods
 //
 //  Created by Maxim Soloviev on 11/04/16.
@@ -16,7 +16,7 @@ extension String {
         }
     }
     
-   public func or_estimatedSize(font: UIFont, maxWidth: CGFloat?, maxHeight: CGFloat?) -> CGSize {
+    public func or_estimatedSize(font: UIFont, maxWidth: CGFloat?, maxHeight: CGFloat?) -> CGSize {
         
         let fontAttributes: [String : AnyObject] = [NSFontAttributeName : font];
         let maxSize: CGSize = CGSize(width: maxWidth ?? CGFloat.max, height: maxHeight ?? CGFloat.max);
@@ -92,5 +92,31 @@ extension String {
         
         let result = self.substringWithRange(substringRange)
         return result
+    }
+
+    public func or_stringWithHttpIfNeeded() -> String {
+        if self.hasPrefix("http://") || self.hasPrefix("https://") {
+            return self
+        } else {
+            return "http://" + self
+        }
+    }
+    
+    public func or_stringByAppendingString(str: String, withSeparatorIfNeeded sep: String) -> String {
+        return self.isEmpty ? str : self + sep + str
+    }
+    
+    public func or_phoneSymbolsOnlyString() -> String {
+        var validationString = ""
+        
+        for char in self.characters {
+            switch char {
+            case "0","1","2","3","4","5","6","7","8","9":
+                validationString.append(char)
+            default:
+                continue
+            }
+        }
+        return validationString
     }
 }

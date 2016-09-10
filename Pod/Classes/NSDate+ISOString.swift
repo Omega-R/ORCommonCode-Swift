@@ -10,7 +10,7 @@ import Foundation
 
 extension NSDate {
     
-    public static func or_dateFromISOString(string: String) -> NSDate? {
+    @objc public static func or_dateFromISOString(string: String) -> NSDate? {
         let dateFormatter = NSDateFormatter()
         dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
         dateFormatter.timeZone = NSTimeZone(abbreviation: "GMT")
@@ -19,7 +19,7 @@ extension NSDate {
         return dateFormatter.dateFromString(string)
     }
     
-    public static func or_ISOStringFromDate(date: NSDate) -> String {
+    @objc public static func or_ISOStringFromDate(date: NSDate) -> String {
         let dateFormatter = NSDateFormatter()
         dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
         dateFormatter.timeZone = NSTimeZone(abbreviation: "GMT")
