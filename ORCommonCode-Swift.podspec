@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ORCommonCode-Swift"
-  s.version          = "0.5.0"
+  s.version          = "0.5.1"
   s.summary          = "ORCommonCode-Swift - extensions, helpers."
 
 # This description is used to generate tags and improve search results.
@@ -29,9 +29,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'ORCommonCode-Swift' => ['Pod/Assets/*.png']
-  }
+  # s.resource_bundles = {
+  #   'ORCommonCode-Swift' => ['Pod/Assets/*.png']
+  # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'Foundation'
