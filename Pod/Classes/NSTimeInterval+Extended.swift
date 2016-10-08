@@ -8,10 +8,10 @@
 
 import Foundation
 
-extension NSTimeInterval {
+extension TimeInterval {
     
     public func or_durationComponents() -> (days: Int, hours: Int, minutes: Int) {
-        let value: NSTimeInterval = self < 0 ? 0 : self
+        let value: TimeInterval = self < 0 ? 0 : self
         
         let days = Int(value / (60 * 60 * 24))
         let hours = Int(value / (60 * 60)) - days * 24
@@ -23,7 +23,7 @@ extension NSTimeInterval {
     /**
      Only 2 top components are printed to string, or only 1 if others == 0
      */
-    public func or_durationStringShort(daysLocalized daysLocalized: String = "d", hoursLocalized: String = "h", minutesLocalized: String = "m") -> String {
+    public func or_durationStringShort(daysLocalized: String = "d", hoursLocalized: String = "h", minutesLocalized: String = "m") -> String {
         var result = ""
         let components = or_durationComponents()
 

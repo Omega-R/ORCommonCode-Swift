@@ -16,25 +16,25 @@ extension String {
         }
     }
     
-    public func or_estimatedSize(font: UIFont, maxWidth: CGFloat?, maxHeight: CGFloat?) -> CGSize {
+    public func or_estimatedSize(_ font: UIFont, maxWidth: CGFloat?, maxHeight: CGFloat?) -> CGSize {
         
         let fontAttributes: [String : AnyObject] = [NSFontAttributeName : font];
-        let maxSize: CGSize = CGSize(width: maxWidth ?? CGFloat.max, height: maxHeight ?? CGFloat.max);
-        let boundingRect: CGRect = self.boundingRectWithSize(maxSize,
-                                                             options: NSStringDrawingOptions.UsesLineFragmentOrigin,
-                                                             attributes: fontAttributes,
-                                                             context: nil);
+        let maxSize: CGSize = CGSize(width: maxWidth ?? CGFloat.greatestFiniteMagnitude, height: maxHeight ?? CGFloat.greatestFiniteMagnitude);
+        let boundingRect: CGRect = self.boundingRect(with: maxSize,
+                                                     options: NSStringDrawingOptions.usesLineFragmentOrigin,
+                                                     attributes: fontAttributes,
+                                                     context: nil);
         
         return boundingRect.size;
     }
     
     public static func or_uniqueString() -> String {
-        let uuid: String = NSUUID().UUIDString;
+        let uuid: String = UUID().uuidString;
         
-        return uuid.stringByTrimmingCharactersInSet(NSCharacterSet(charactersInString: "-"));
+        return uuid.trimmingCharacters(in: CharacterSet(charactersIn: "-"));
     }
     
-    public static func or_localized(keyStr: String) -> String {
+    public static func or_localized(_ keyStr: String) -> String {
         return NSLocalizedString(keyStr, comment: "")
     }
     
@@ -42,28 +42,28 @@ extension String {
         return self.or_matchesForRegexInText("^file:///").count > 0
     }
     
-    public func or_repeatString(n:Int) -> String {
+    public func or_repeatString(_ n:Int) -> String {
         if (n < 1) {
             return ""
         }
         
         var result = self
         for _ in 1 ..< n {
-            result.appendContentsOf(self)
+            result.append(self)
         }
         return result
     }
     
-    public mutating func or_appendToChain(other: String?, separator: String = " ") {
+    public mutating func or_appendToChain(_ other: String?, separator: String = " ") {
         guard let strToAdd = other else { return }
         self = (self.or_length > 0) ? "\(self)\(separator)\(strToAdd)" : strToAdd
     }
     
-    public func or_matchesForRegexInText(regex: String!) -> [NSTextCheckingResult] {
+    public func or_matchesForRegexInText(_ regex: String!) -> [NSTextCheckingResult] {
         do {
             let regex = try NSRegularExpression(pattern: regex, options: [])
             let nsString = self as NSString
-            let results = regex.matchesInString(self, options: [], range: NSMakeRange(0, nsString.length))
+            let results = regex.matches(in: self, options: [], range: NSMakeRange(0, nsString.length))
             return results
         } catch let error as NSError {
             print("Invalid regex: \(error.localizedDescription)")
@@ -76,21 +76,21 @@ extension String {
         return result
     }
     
-    public func or_sizeWithFont(font: UIFont, maxWidth: CGFloat = CGFloat.max) -> CGSize {
-        let size = NSString(string: self).boundingRectWithSize(CGSizeMake(maxWidth, CGFloat.max),
-                                                               options: .UsesLineFragmentOrigin,
-                                                               attributes: [NSFontAttributeName: font],
-                                                               context: nil).size
-        let result = CGSizeMake(ceil(size.width), ceil(size.height))
+    public func or_sizeWithFont(_ font: UIFont, maxWidth: CGFloat = CGFloat.greatestFiniteMagnitude) -> CGSize {
+        let size = NSString(string: self).boundingRect(with: CGSize(width: maxWidth, height: CGFloat.greatestFiniteMagnitude),
+                                                       options: .usesLineFragmentOrigin,
+                                                       attributes: [NSFontAttributeName: font],
+                                                       context: nil).size
+        let result = CGSize(width: ceil(size.width), height: ceil(size.height))
         return result
     }
     
-    public func or_substringWithRange(range: NSRange) -> String {
-        let startIndex = self.startIndex.advancedBy(range.location)
-        let endIndex = startIndex.advancedBy(range.length)
+    public func or_substringWithRange(_ range: NSRange) -> String {
+        let startIndex = self.characters.index(self.startIndex, offsetBy: range.location)
+        let endIndex = self.characters.index(self.startIndex, offsetBy: range.length)
         let substringRange = startIndex ..< endIndex
         
-        let result = self.substringWithRange(substringRange)
+        let result = self.substring(with: substringRange)
         return result
     }
 
@@ -102,7 +102,7 @@ extension String {
         }
     }
     
-    public func or_stringByAppendingString(str: String, withSeparatorIfNeeded sep: String) -> String {
+    public func or_stringByAppendingString(_ str: String, withSeparatorIfNeeded sep: String) -> String {
         return self.isEmpty ? str : self + sep + str
     }
     

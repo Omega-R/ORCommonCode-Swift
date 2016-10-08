@@ -8,16 +8,16 @@
 
 import UIKit
 
-@objc public class ORMath: NSObject {
+@objc open class ORMath: NSObject {
     
     // only static methods are available
-    private override init() {
+    fileprivate override init() {
     }
     
     /**
      @param t: 0.0 - 1.0
      */
-    @objc public static func lerp(a: CGFloat, _ b: CGFloat, _ t: CGFloat) -> CGFloat {
+    @objc open static func lerp(_ a: CGFloat, _ b: CGFloat, _ t: CGFloat) -> CGFloat {
         let res = (a + (b - a) * t)
         return res
     }
@@ -25,17 +25,17 @@ import UIKit
     /**
      @param t: 0.0 - 1.0
      */
-    @objc public static func cerp(a: CGFloat, _ b: CGFloat, _ t: CGFloat) -> CGFloat {
+    @objc open static func cerp(_ a: CGFloat, _ b: CGFloat, _ t: CGFloat) -> CGFloat {
         let res = (a + (b - a) * pow(t, 3))
         return res
     }
     
-    @objc public static func distance(a: CGPoint, _ b: CGPoint) -> CGFloat {
+    @objc open static func distance(_ a: CGPoint, _ b: CGPoint) -> CGFloat {
         let distance = hypot(a.x - b.x, a.y - b.y)
         return distance
     }
     
-    public static func clamp<T: Comparable>(value: T, _ lower: T, _ upper: T) -> T {
+    open static func clamp<T: Comparable>(_ value: T, _ lower: T, _ upper: T) -> T {
         return min(max(value, lower), upper)
     }
 }

@@ -22,71 +22,71 @@ class NSTimeIntervalExtendedTestsTests: XCTestCase {
     }
 
     func testNormal() {
-        var value = NSTimeInterval(60)
-        var comp = NSTimeInterval(value).or_durationComponents()
+        var value = TimeInterval(60)
+        var comp = TimeInterval(value).or_durationComponents()
         XCTAssertEqual(comp.days, 0)
         XCTAssertEqual(comp.hours, 0)
         XCTAssertEqual(comp.minutes, 1)
-        XCTAssertEqual(NSTimeInterval(value).or_durationStringShort(), "1m")
+        XCTAssertEqual(TimeInterval(value).or_durationStringShort(), "1m")
 
-        value = NSTimeInterval(61)
-        comp = NSTimeInterval(value).or_durationComponents()
+        value = TimeInterval(61)
+        comp = TimeInterval(value).or_durationComponents()
         XCTAssertEqual(comp.days, 0)
         XCTAssertEqual(comp.hours, 0)
         XCTAssertEqual(comp.minutes, 1)
-        XCTAssertEqual(NSTimeInterval(value).or_durationStringShort(), "1m")
+        XCTAssertEqual(TimeInterval(value).or_durationStringShort(), "1m")
 
-        value = NSTimeInterval(120)
-        comp = NSTimeInterval(value).or_durationComponents()
+        value = TimeInterval(120)
+        comp = TimeInterval(value).or_durationComponents()
         XCTAssertEqual(comp.days, 0)
         XCTAssertEqual(comp.hours, 0)
         XCTAssertEqual(comp.minutes, 2)
-        XCTAssertEqual(NSTimeInterval(value).or_durationStringShort(), "2m")
+        XCTAssertEqual(TimeInterval(value).or_durationStringShort(), "2m")
         
-        value = NSTimeInterval(3_600)
-        comp = NSTimeInterval(value).or_durationComponents()
+        value = TimeInterval(3_600)
+        comp = TimeInterval(value).or_durationComponents()
         XCTAssertEqual(comp.days, 0)
         XCTAssertEqual(comp.hours, 1)
         XCTAssertEqual(comp.minutes, 0)
-        XCTAssertEqual(NSTimeInterval(value).or_durationStringShort(), "1h")
+        XCTAssertEqual(TimeInterval(value).or_durationStringShort(), "1h")
 
-        value = NSTimeInterval(3_660)
-        comp = NSTimeInterval(value).or_durationComponents()
+        value = TimeInterval(3_660)
+        comp = TimeInterval(value).or_durationComponents()
         XCTAssertEqual(comp.days, 0)
         XCTAssertEqual(comp.hours, 1)
         XCTAssertEqual(comp.minutes, 1)
-        XCTAssertEqual(NSTimeInterval(value).or_durationStringShort(), "1h 1m")
+        XCTAssertEqual(TimeInterval(value).or_durationStringShort(), "1h 1m")
 
-        value = NSTimeInterval(36_000)
-        comp = NSTimeInterval(value).or_durationComponents()
+        value = TimeInterval(36_000)
+        comp = TimeInterval(value).or_durationComponents()
         XCTAssertEqual(comp.days, 0)
         XCTAssertEqual(comp.hours, 10)
         XCTAssertEqual(comp.minutes, 0)
-        XCTAssertEqual(NSTimeInterval(value).or_durationStringShort(), "10h")
+        XCTAssertEqual(TimeInterval(value).or_durationStringShort(), "10h")
         
-        value = NSTimeInterval(86_400)
-        comp = NSTimeInterval(value).or_durationComponents()
+        value = TimeInterval(86_400)
+        comp = TimeInterval(value).or_durationComponents()
         XCTAssertEqual(comp.days, 1)
         XCTAssertEqual(comp.hours, 0)
         XCTAssertEqual(comp.minutes, 0)
-        XCTAssertEqual(NSTimeInterval(value).or_durationStringShort(), "1d")
+        XCTAssertEqual(TimeInterval(value).or_durationStringShort(), "1d")
     }
     
     func testZero() {
-        let comp = NSTimeInterval(0).or_durationComponents()
+        let comp = TimeInterval(0).or_durationComponents()
         XCTAssertEqual(comp.days, 0)
         XCTAssertEqual(comp.hours, 0)
         XCTAssertEqual(comp.minutes, 0)
         
-        XCTAssertEqual(NSTimeInterval(0).or_durationStringShort(), "0m")
+        XCTAssertEqual(TimeInterval(0).or_durationStringShort(), "0m")
     }
     
     func testNegative() {
-        let comp = NSTimeInterval(-1).or_durationComponents()
+        let comp = TimeInterval(-1).or_durationComponents()
         XCTAssertEqual(comp.days, 0)
         XCTAssertEqual(comp.hours, 0)
         XCTAssertEqual(comp.minutes, 0)
         
-        XCTAssertEqual(NSTimeInterval(0).or_durationStringShort(), "0m")
+        XCTAssertEqual(TimeInterval(0).or_durationStringShort(), "0m")
     }
 }
