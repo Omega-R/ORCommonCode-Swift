@@ -16,16 +16,17 @@ extension String {
         }
     }
     
-    public func or_estimatedSize(_ font: UIFont, maxWidth: CGFloat?, maxHeight: CGFloat?) -> CGSize {
-        
-        let fontAttributes: [String : AnyObject] = [NSFontAttributeName : font];
-        let maxSize: CGSize = CGSize(width: maxWidth ?? CGFloat.greatestFiniteMagnitude, height: maxHeight ?? CGFloat.greatestFiniteMagnitude);
+    public func or_estimatedSize(font: UIFont,
+                                 maxWidth: CGFloat = CGFloat.greatestFiniteMagnitude,
+                                 maxHeight: CGFloat = CGFloat.greatestFiniteMagnitude) -> CGSize {
+        let fontAttributes: [String : AnyObject] = [NSFontAttributeName : font]
+        let maxSize: CGSize = CGSize(width: maxWidth, height: maxHeight)
         let boundingRect: CGRect = self.boundingRect(with: maxSize,
                                                      options: NSStringDrawingOptions.usesLineFragmentOrigin,
                                                      attributes: fontAttributes,
-                                                     context: nil);
+                                                     context: nil)
         
-        return boundingRect.size;
+        return boundingRect.size
     }
     
     public static func or_uniqueString() -> String {
@@ -42,7 +43,7 @@ extension String {
         return self.or_matchesForRegexInText("^file:///").count > 0
     }
     
-    public func or_repeatString(_ n:Int) -> String {
+    public func or_repeatingString(_ n:Int) -> String {
         if (n < 1) {
             return ""
         }
@@ -76,16 +77,7 @@ extension String {
         return result
     }
     
-    public func or_sizeWithFont(_ font: UIFont, maxWidth: CGFloat = CGFloat.greatestFiniteMagnitude) -> CGSize {
-        let size = NSString(string: self).boundingRect(with: CGSize(width: maxWidth, height: CGFloat.greatestFiniteMagnitude),
-                                                       options: .usesLineFragmentOrigin,
-                                                       attributes: [NSFontAttributeName: font],
-                                                       context: nil).size
-        let result = CGSize(width: ceil(size.width), height: ceil(size.height))
-        return result
-    }
-    
-    public func or_substringWithRange(_ range: NSRange) -> String {
+    public func or_substring(range: NSRange) -> String {
         let startIndex = self.characters.index(self.startIndex, offsetBy: range.location)
         let endIndex = self.characters.index(self.startIndex, offsetBy: range.length)
         let substringRange = startIndex ..< endIndex
@@ -94,7 +86,7 @@ extension String {
         return result
     }
 
-    public func or_stringWithHttpIfNeeded() -> String {
+    public func or_withHttpIfNeeded() -> String {
         if self.hasPrefix("http://") || self.hasPrefix("https://") {
             return self
         } else {
@@ -111,7 +103,7 @@ extension String {
         
         for char in self.characters {
             switch char {
-            case "0","1","2","3","4","5","6","7","8","9":
+            case "0","1","2","3","4","5","6","7","8","9","-","+","(",")":
                 validationString.append(char)
             default:
                 continue

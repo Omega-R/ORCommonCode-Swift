@@ -10,7 +10,7 @@ import Foundation
 
 extension NSAttributedString {
     
-    public static func or_stringWithText(_ text: String, textColor: UIColor?, font: UIFont?, textAlign: NSTextAlignment = NSTextAlignment.center, lineBreakMode: NSLineBreakMode? = NSLineBreakMode.byWordWrapping, tightenLineSpacing: Bool = false, kerningValue: CGFloat?) -> NSAttributedString {
+    public static func or_attrString(text: String, textColor: UIColor?, font: UIFont?, textAlign: NSTextAlignment = NSTextAlignment.center, lineBreakMode: NSLineBreakMode? = NSLineBreakMode.byWordWrapping, tightenLineSpacing: Bool = false, kerningValue: CGFloat?) -> NSAttributedString {
         let paragraphStyle = NSMutableParagraphStyle()
         
         if lineBreakMode != nil {
@@ -36,7 +36,7 @@ extension NSAttributedString {
         return string
     }
     
-    @objc public static func or_stringWithHyperlinks(_ original: String, attributes: [String : AnyObject] = [:]) -> NSAttributedString {
+    @objc public static func or_attrStringWithHyperlinks(original: String, attributes: [String : AnyObject] = [:]) -> NSAttributedString {
         let matches = original.or_matchesForRegexInText("\\[(.*?)\\]")
         if ((matches.count % 2) != 0 || matches.count == 0) {
             return NSAttributedString()
