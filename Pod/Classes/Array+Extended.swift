@@ -12,7 +12,7 @@ extension Array {
     
     // Returns the first element satisfying the predicate, or `nil`
     // if there is no matching element.
-    public func or_findFirstMatching(_ predicate: (Element) -> Bool) -> Element? {
+    public func or_findFirstMatching<L : BooleanType>(predicate: Element -> L) -> Element? {
         for item in self {
             if predicate(item) {
                 return item // found
@@ -21,7 +21,7 @@ extension Array {
         return nil // not found
     }
     
-    public func or_limitedBySize(_ size: Int) -> [Element] {
+    public func or_limitedBySize(size: Int) -> [Element] {
         if (self.count <= size) {
             return self
         } else {

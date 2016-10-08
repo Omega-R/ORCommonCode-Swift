@@ -8,17 +8,17 @@
 
 import Foundation
 
-extension Date {
+extension NSDate {
     
-    public func or_toLocalTime() -> Date {
-        let tz = TimeZone.current
-        let seconds = tz.secondsFromGMT(for: self)
-        return Date(timeInterval: TimeInterval(seconds), since: self)
+    @objc public func or_toLocalTime() -> NSDate {
+        let tz = NSTimeZone.defaultTimeZone()
+        let seconds = tz.secondsFromGMTForDate(self)
+        return NSDate(timeInterval: NSTimeInterval(seconds), sinceDate: self)
     }
     
-    public func or_toUTC() -> Date {
-        let tz = TimeZone.current
-        let seconds = -tz.secondsFromGMT(for: self)
-        return Date(timeInterval: TimeInterval(seconds), since: self)
+    @objc public func or_toUTC() -> NSDate {
+        let tz = NSTimeZone.defaultTimeZone()
+        let seconds = -tz.secondsFromGMTForDate(self)
+        return NSDate(timeInterval: NSTimeInterval(seconds), sinceDate: self)
     }
 }

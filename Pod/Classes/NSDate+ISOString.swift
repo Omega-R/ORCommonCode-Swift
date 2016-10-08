@@ -8,23 +8,23 @@
 
 import Foundation
 
-extension Date {
+extension NSDate {
     
-    public static func or_dateFromISOString(_ string: String) -> Date? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-        dateFormatter.timeZone = TimeZone(abbreviation: "GMT")
+    @objc public static func or_dateFromISOString(string: String) -> NSDate? {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+        dateFormatter.timeZone = NSTimeZone(abbreviation: "GMT")
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         
-        return dateFormatter.date(from: string)
+        return dateFormatter.dateFromString(string)
     }
     
-    public static func or_ISOStringFromDate(_ date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-        dateFormatter.timeZone = TimeZone(abbreviation: "GMT")
+    @objc public static func or_ISOStringFromDate(date: NSDate) -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+        dateFormatter.timeZone = NSTimeZone(abbreviation: "GMT")
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
         
-        return dateFormatter.string(from: date) + "Z"
+        return dateFormatter.stringFromDate(date).stringByAppendingString("Z")
     }
 }

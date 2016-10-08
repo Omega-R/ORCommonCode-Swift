@@ -10,7 +10,7 @@ import Foundation
 
 extension Dictionary {
     
-    public func or_dictionaryByAddingValuesFrom(_ other: Dictionary) -> Dictionary {
+    public func or_dictionaryByAddingValuesFrom(other: Dictionary) -> Dictionary {
         var dict = self
         for (key, value) in other {
             dict.updateValue(value, forKey:key)
