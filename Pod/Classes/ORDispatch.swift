@@ -8,6 +8,10 @@
 
 import Foundation
 
-public func or_dispatch_in_main_queue_after(delayInSeconds: Double, block: dispatch_block_t) {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), block)
+public func or_dispatch_in_main_queue_after(_ delayInSeconds: Double, block: @escaping ()->()) {
+    if delayInSeconds == 0 {
+        DispatchQueue.main.async(execute: block)
+    } else {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds, execute: block)
+    }
 }
