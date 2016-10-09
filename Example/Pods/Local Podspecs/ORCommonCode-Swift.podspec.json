@@ -1,6 +1,6 @@
 {
   "name": "ORCommonCode-Swift",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "summary": "ORCommonCode-Swift - extensions, helpers.",
   "description": "String+Extended, Array+Extended, NSAttributedString+Extended, NSDate+ISOString, dispatching and notification helpers, ORMath, etc.",
   "homepage": "https://bitbucket.org/omegarinc/orcommoncode-swift",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://bitbucket.org/omegarinc/orcommoncode-swift.git",
-    "tag": "3.0.1"
+    "tag": "3.0.2"
   },
   "platforms": {
     "ios": "8.0"

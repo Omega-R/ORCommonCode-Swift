@@ -9,7 +9,7 @@
 import Foundation
 
 public func or_addObserver(_ observer: AnyObject, selector aSelector: Selector, name aName: String?, object anObject: AnyObject? = nil) {
-    let notificationName: NSNotification.Name? = aName != nil ? NSNotification.Name(aName!) : nil
+    let notificationName: Notification.Name? = aName != nil ? Notification.Name(aName!) : nil
     NotificationCenter.default.addObserver(observer, selector: aSelector, name: notificationName, object: anObject)
 }
 
