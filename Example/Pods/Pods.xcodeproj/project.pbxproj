@@ -20,6 +20,7 @@
 		7BD4673C8A226075E0FCF110A044539E /* ORCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB01B4FE43CB080050E9B5FE088D622C /* ORCommon.swift */; };
 		83882523740C318628DE3D7BC7A06867 /* ORMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED963E9AA2FCB88270CE28C1F6B810 /* ORMath.swift */; };
 		8A26FE58F46004F0BA4DA48B83A3FE14 /* Array+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8894620C6AAA29947BEF14AC9812FD3B /* Array+Extended.swift */; };
+		94493DD51DC7E0960031E7A9 /* ORNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94493DD41DC7E0960031E7A9 /* ORNumberFormatter.swift */; };
 		B379C560B4FB82D7523294A97A683892 /* ORNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E344384F5B872F8617244E93669062 /* ORNotifications.swift */; };
 		B3BAED7576EF69A037FF5CE0327DBFA2 /* Pods-ORCommonCode-Swift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A6E64BE4E50FA68962D4E20A64B9EB /* Pods-ORCommonCode-Swift_Tests-dummy.m */; };
 		B5E0E515545FCFC4402F3A291E0727E4 /* String+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B481860BA98708CC973BF35E430CFB0 /* String+Extended.swift */; };
@@ -65,6 +66,7 @@
 		85E1432B46B4F91B24B534F5F5AF4F19 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8894620C6AAA29947BEF14AC9812FD3B /* Array+Extended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+Extended.swift"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94493DD41DC7E0960031E7A9 /* ORNumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ORNumberFormatter.swift; sourceTree = "<group>"; };
 		98E459D60108D3AAA0398560F1811576 /* Pods-ORCommonCode-Swift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ORCommonCode-Swift_Example-frameworks.sh"; sourceTree = "<group>"; };
 		9B481860BA98708CC973BF35E430CFB0 /* String+Extended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Extended.swift"; sourceTree = "<group>"; };
 		A157CA84A593FA478662C3DB7B4F3E18 /* Pods-ORCommonCode-Swift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ORCommonCode-Swift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				E8ED963E9AA2FCB88270CE28C1F6B810 /* ORMath.swift */,
 				24E344384F5B872F8617244E93669062 /* ORNotifications.swift */,
 				9B481860BA98708CC973BF35E430CFB0 /* String+Extended.swift */,
+				94493DD41DC7E0960031E7A9 /* ORNumberFormatter.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 			files = (
 				8A26FE58F46004F0BA4DA48B83A3FE14 /* Array+Extended.swift in Sources */,
 				B8A23A8B14AC3482E63C7911CB715E08 /* Dictionary+Extended.swift in Sources */,
+				94493DD51DC7E0960031E7A9 /* ORNumberFormatter.swift in Sources */,
 				CA133E7EBC28AA2D7971239710E4955C /* NSAttributedString+Extended.swift in Sources */,
 				187D8D2B8AFCA7EAC182BBB4BA822485 /* NSDate+ISOString.swift in Sources */,
 				1AB68F7601C57DCC301E85F32C75ED47 /* NSDate+UTC.swift in Sources */,

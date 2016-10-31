@@ -16,6 +16,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		943193CE1CC0FB9400B0A531 /* NSTimeInterval+ExtendedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943193CC1CC0FAE700B0A531 /* NSTimeInterval+ExtendedTests.swift */; };
 		9436D81A1CD3910C00230223 /* NSDate+ISOStringTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9436D8181CD3909400230223 /* NSDate+ISOStringTest.swift */; };
+		94493DD71DC7E7530031E7A9 /* ORNumberFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94493DD61DC7E7530031E7A9 /* ORNumberFormatterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		943193CC1CC0FAE700B0A531 /* NSTimeInterval+ExtendedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimeInterval+ExtendedTests.swift"; sourceTree = "<group>"; };
 		943193D51CC1010C00B0A531 /* ORCommonCode_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ORCommonCode_Swift.framework; path = "../../../Library/Developer/Xcode/DerivedData/ORCommonCode-Swift-cseorscvnolcvxcmqvoklsztfpnv/Build/Products/Debug-iphonesimulator/ORCommonCode_Swift.framework"; sourceTree = "<group>"; };
 		9436D8181CD3909400230223 /* NSDate+ISOStringTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+ISOStringTest.swift"; sourceTree = "<group>"; };
+		94493DD61DC7E7530031E7A9 /* ORNumberFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ORNumberFormatterTests.swift; sourceTree = "<group>"; };
 		A6C26B6FA9ED1092E8C30DCE /* Pods_ORCommonCode_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ORCommonCode_Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03D79C182BAFE3F5461D665 /* Pods-ORCommonCode-Swift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORCommonCode-Swift_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ORCommonCode-Swift_Tests/Pods-ORCommonCode-Swift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C7508047FE1A5D1F56398733 /* Pods-ORCommonCode-Swift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORCommonCode-Swift_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ORCommonCode-Swift_Example/Pods-ORCommonCode-Swift_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				943193CC1CC0FAE700B0A531 /* NSTimeInterval+ExtendedTests.swift */,
 				9436D8181CD3909400230223 /* NSDate+ISOStringTest.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				94493DD61DC7E7530031E7A9 /* ORNumberFormatterTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			files = (
 				943193CE1CC0FB9400B0A531 /* NSTimeInterval+ExtendedTests.swift in Sources */,
 				9436D81A1CD3910C00230223 /* NSDate+ISOStringTest.swift in Sources */,
+				94493DD71DC7E7530031E7A9 /* ORNumberFormatterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
