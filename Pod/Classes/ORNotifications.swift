@@ -13,8 +13,9 @@ public func or_addObserver(_ observer: AnyObject, selector aSelector: Selector, 
     NotificationCenter.default.addObserver(observer, selector: aSelector, name: notificationName, object: anObject)
 }
 
-public func or_removeObserver(_ observer: AnyObject) {
-    NotificationCenter.default.removeObserver(observer)
+public func or_removeObserver(_ observer: AnyObject, name aName: String?, object anObject: AnyObject? = nil) {
+    let notificationName: Notification.Name? = aName != nil ? Notification.Name(aName!) : nil
+    NotificationCenter.default.removeObserver(observer, name: notificationName, object: anObject)
 }
 
 public func or_postNotification(_ name: String, object anObject: AnyObject? = nil, userInfo: [AnyHashable: Any]? = nil) {
