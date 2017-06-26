@@ -1,5 +1,5 @@
 //
-//  NSDate+ISOString.swift
+//  Date+ISOString.swift
 //  Pods
 //
 //  Created by Maxim Soloviev on 29/01/16.

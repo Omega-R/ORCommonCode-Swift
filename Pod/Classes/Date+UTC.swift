@@ -1,5 +1,5 @@
 //
-//  NSDate+UTC.swift
+//  Date+UTC.swift
 //  Pods
 //
 //  Created by Maxim Soloviev on 02/02/16.

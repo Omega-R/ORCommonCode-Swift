@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ORCommonCode-Swift"
-  s.version          = "3.1.0"
+  s.version          = "3.2.0"
   s.summary          = "ORCommonCode-Swift - extensions, helpers."
 
 # This description is used to generate tags and improve search results.
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = "String+Extended, Array+Extended, NSAttributedString+Extended, NSDate+ISOString, dispatching and notification helpers, ORMath, etc."
+  s.description      = "String+Extended, Array+Extended, NSAttributedString+Extended, Date+ISOString, Date+UTC, TimeInterval+DurationComponents, dispatching and notification helpers, ORMath, etc."
 
   s.homepage         = "https://bitbucket.org/omegarinc/orcommoncode-swift"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
