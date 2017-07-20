@@ -19,6 +19,7 @@
 		676F7275B28F2B2F4C745878E38432F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		705C576B56D2C51A919D866978A83EF5 /* Data+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311D6B8A52700C658189BFB225A44387 /* Data+Extended.swift */; };
 		79B313194BFEC925C94C06226E6668FF /* Pods-ORCommonCode-Swift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F877B11F3D791C3DA02059C8C73F5B43 /* Pods-ORCommonCode-Swift_Example-dummy.m */; };
+		94B37DEE1F20DE5E00112B36 /* ORAppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B37DED1F20DE5E00112B36 /* ORAppInfo.swift */; };
 		9522516FFEDE2A6B5577825D55D1A6E4 /* ORNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FEA8D0D15CE6D5DB2427BADB5F227C /* ORNotifications.swift */; };
 		A18535B5A041480FC32B30CE3408CF85 /* ORCommonCode-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A4E3A8AA0F8C67662BD92F3CEDEEC0A0 /* ORCommonCode-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A27975DFC8A55D95752CCD5C219EDD76 /* ORDispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51F3C5856FDA54756DAB702472E80F6 /* ORDispatch.swift */; };
@@ -57,9 +58,9 @@
 		32E1BBB47F90426F8C4D59E694CC1890 /* ORCommonCode-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ORCommonCode-Swift-prefix.pch"; sourceTree = "<group>"; };
 		3B195B3BD1122D13FDB276BE3E226D1B /* ORNumberFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ORNumberFormatter.swift; sourceTree = "<group>"; };
 		42E36BAE51517028E272BB212BB6A1ED /* Date+UTC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+UTC.swift"; sourceTree = "<group>"; };
-		489973EF1F4153CA8266A8F311AAB609 /* Pods-ORCommonCode-Swift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ORCommonCode-Swift_Tests.modulemap"; sourceTree = "<group>"; };
-		525CA24623ACB786DE03FC504D8B3997 /* Pods_ORCommonCode_Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ORCommonCode_Swift_Tests.framework; path = "Pods-ORCommonCode-Swift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		62C11572B47450C4FDE3392BCDD80E8B /* ORCommonCode_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ORCommonCode_Swift.framework; path = "ORCommonCode-Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		489973EF1F4153CA8266A8F311AAB609 /* Pods-ORCommonCode-Swift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ORCommonCode-Swift_Tests.modulemap"; sourceTree = "<group>"; };
+		525CA24623ACB786DE03FC504D8B3997 /* Pods_ORCommonCode_Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ORCommonCode_Swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62C11572B47450C4FDE3392BCDD80E8B /* ORCommonCode_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ORCommonCode_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		67A6E64BE4E50FA68962D4E20A64B9EB /* Pods-ORCommonCode-Swift_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ORCommonCode-Swift_Tests-dummy.m"; sourceTree = "<group>"; };
 		6F9E82648BD16E018BE8C5651D7266EF /* Pods-ORCommonCode-Swift_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ORCommonCode-Swift_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -71,14 +72,15 @@
 		8A2DC9B731A373A70AB24BF577157652 /* String+Extended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Extended.swift"; sourceTree = "<group>"; };
 		8BBA90796526B39929F09BB4E1FBE626 /* TimeInterval+DurationComponents.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "TimeInterval+DurationComponents.swift"; sourceTree = "<group>"; };
 		8C6F10FDFAB79C4E5AFCEC28EC349C43 /* Date+ISOString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+ISOString.swift"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94B37DED1F20DE5E00112B36 /* ORAppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ORAppInfo.swift; sourceTree = "<group>"; };
 		98E459D60108D3AAA0398560F1811576 /* Pods-ORCommonCode-Swift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ORCommonCode-Swift_Example-frameworks.sh"; sourceTree = "<group>"; };
 		A157CA84A593FA478662C3DB7B4F3E18 /* Pods-ORCommonCode-Swift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ORCommonCode-Swift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		A3D2C1609CFB2FEBFE665FE75B0C665F /* ORCommonCode-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "ORCommonCode-Swift.modulemap"; sourceTree = "<group>"; };
+		A3D2C1609CFB2FEBFE665FE75B0C665F /* ORCommonCode-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "ORCommonCode-Swift.modulemap"; sourceTree = "<group>"; };
 		A4E3A8AA0F8C67662BD92F3CEDEEC0A0 /* ORCommonCode-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ORCommonCode-Swift-umbrella.h"; sourceTree = "<group>"; };
 		A7D8188C434BF7601FEFBB39A60554A9 /* Pods-ORCommonCode-Swift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ORCommonCode-Swift_Example.release.xcconfig"; sourceTree = "<group>"; };
-		AA13219F6BB8F6507BBB716EEF46381A /* Pods_ORCommonCode_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ORCommonCode_Swift_Example.framework; path = "Pods-ORCommonCode-Swift_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA4798D00C0098E03D677EA8632544F1 /* Pods-ORCommonCode-Swift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ORCommonCode-Swift_Example.modulemap"; sourceTree = "<group>"; };
+		AA13219F6BB8F6507BBB716EEF46381A /* Pods_ORCommonCode_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ORCommonCode_Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA4798D00C0098E03D677EA8632544F1 /* Pods-ORCommonCode-Swift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ORCommonCode-Swift_Example.modulemap"; sourceTree = "<group>"; };
 		AFA31420C0A03F6E2C9E471A26D311E5 /* Pods-ORCommonCode-Swift_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ORCommonCode-Swift_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		B52C47BFB557E75B8D15F9F0FEACEB8C /* Dictionary+Extended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extended.swift"; sourceTree = "<group>"; };
 		BA84EDA11A88C1898A8B580CA0CC95DB /* Pods-ORCommonCode-Swift_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ORCommonCode-Swift_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -217,8 +219,8 @@
 				3B195B3BD1122D13FDB276BE3E226D1B /* ORNumberFormatter.swift */,
 				8A2DC9B731A373A70AB24BF577157652 /* String+Extended.swift */,
 				8BBA90796526B39929F09BB4E1FBE626 /* TimeInterval+DurationComponents.swift */,
+				94B37DED1F20DE5E00112B36 /* ORAppInfo.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -263,7 +265,6 @@
 			children = (
 				97BCFD65A29B1F5B9B19B91C455D8BF5 /* Classes */,
 			);
-			name = Pod;
 			path = Pod;
 			sourceTree = "<group>";
 		};
@@ -400,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FD9549D36F4CAEAAF299B9590C8AF42 /* Array+Extended.swift in Sources */,
+				94B37DEE1F20DE5E00112B36 /* ORAppInfo.swift in Sources */,
 				705C576B56D2C51A919D866978A83EF5 /* Data+Extended.swift in Sources */,
 				A530C481F31891F6D10FE5789D65AA32 /* Date+ISOString.swift in Sources */,
 				C9835F331753487EABFF2E11CD5F7D0E /* Date+UTC.swift in Sources */,

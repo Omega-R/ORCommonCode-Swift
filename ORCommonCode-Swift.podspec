@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = "String+Extended, Array+Extended, NSAttributedString+Extended, Date+ISOString, Date+UTC, TimeInterval+DurationComponents, dispatching and notification helpers, ORMath, etc."
+  s.description      = "String+Extended, Array+Extended, NSAttributedString+Extended, Date+ISOString, Date+UTC, TimeInterval+DurationComponents, dispatching and notification helpers, ORMath, ORAppInfo, etc."
 
   s.homepage         = "https://bitbucket.org/omegarinc/orcommoncode-swift"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
