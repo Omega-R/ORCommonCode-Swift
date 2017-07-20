@@ -9,7 +9,28 @@
 import UIKit
 
 @objc open class ORMath: NSObject {
-    
+
+    open class AverageValueCalculator: NSObject {
+        private(set) open var avgValue: Double = 0
+        private(set) open var valueCount = 0
+        
+        open func addValueAndReturnAverage(_ value: Double) -> Double {
+            valueCount += 1
+            
+            avgValue = (avgValue * Double(valueCount - 1) + value) / Double(valueCount)
+            return avgValue
+        }
+        
+        open func addValue(_ value: Double) {
+            _ = addValueAndReturnAverage(value)
+        }
+        
+        open func reset() {
+            avgValue = 0
+            valueCount = 0
+        }
+    }
+
     // only static methods are available
     fileprivate override init() {
     }
