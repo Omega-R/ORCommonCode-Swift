@@ -33,9 +33,9 @@ open class ORNumberFormatter {
             switch abs(value) {
             case 0 ..< 1_000:
                 self = .none
-            case 1_000 ..< 999_999:
+            case 1_000 ..< 1_000_000:
                 self = .thousands
-            case 1_000_000 ..< 999_999_999:
+            case 1_000_000 ..< 1_000_000_000:
                 self = .millions
             default:
                 self = .billions

@@ -23,38 +23,54 @@ class ORNumberFormatterTests: XCTestCase {
     
     func testNone() {
         let nf = ORNumberFormatter()
-        XCTAssertEqual(nf.stringValue(for: 0, significantUnits: .none), "0")
-        XCTAssertEqual(nf.stringValue(for: 1, significantUnits: .none), "1")
-        XCTAssertEqual(nf.stringValue(for: 1_000, significantUnits: .none), "1000")
-        XCTAssertEqual(nf.stringValue(for: 1_000_000, significantUnits: .none), "1000000")
-        XCTAssertEqual(nf.stringValue(for: 1_000_000_000, significantUnits: .none), "1000000000")
+        let significantUnits = ORNumberFormatter.SignificantUnits.none
+        XCTAssertEqual(nf.stringValue(for: 0, significantUnits: significantUnits), "0")
+        XCTAssertEqual(nf.stringValue(for: 1, significantUnits: significantUnits), "1")
+        XCTAssertEqual(nf.stringValue(for: 999, significantUnits: significantUnits), "999")
+        XCTAssertEqual(nf.stringValue(for: 1_000, significantUnits: significantUnits), "1000")
+        XCTAssertEqual(nf.stringValue(for: 999_999, significantUnits: significantUnits), "999999")
+        XCTAssertEqual(nf.stringValue(for: 1_000_000, significantUnits: significantUnits), "1000000")
+        XCTAssertEqual(nf.stringValue(for: 999_999_999, significantUnits: significantUnits), "999999999")
+        XCTAssertEqual(nf.stringValue(for: 1_000_000_000, significantUnits: significantUnits), "1000000000")
     }
 
     func testThousands() {
         let nf = ORNumberFormatter()
-        XCTAssertEqual(nf.stringValue(for: 0, significantUnits: .thousands), "0")
-        XCTAssertEqual(nf.stringValue(for: 1, significantUnits: .thousands), "0")
-        XCTAssertEqual(nf.stringValue(for: 1_000, significantUnits: .thousands), "1")
-        XCTAssertEqual(nf.stringValue(for: 1_000_000, significantUnits: .thousands), "1000")
-        XCTAssertEqual(nf.stringValue(for: 1_000_000_000, significantUnits: .thousands), "1000000")
+        let significantUnits = ORNumberFormatter.SignificantUnits.thousands
+        XCTAssertEqual(nf.stringValue(for: 0, significantUnits: significantUnits), "0")
+        XCTAssertEqual(nf.stringValue(for: 1, significantUnits: significantUnits), "0")
+        XCTAssertEqual(nf.stringValue(for: 999, significantUnits: significantUnits), "0.9")
+        XCTAssertEqual(nf.stringValue(for: 1_000, significantUnits: significantUnits), "1")
+        XCTAssertEqual(nf.stringValue(for: 999_999, significantUnits: significantUnits), "999.9")
+        XCTAssertEqual(nf.stringValue(for: 1_000_000, significantUnits: significantUnits), "1000")
+        XCTAssertEqual(nf.stringValue(for: 999_999_999, significantUnits: significantUnits), "999999.9")
+        XCTAssertEqual(nf.stringValue(for: 1_000_000_000, significantUnits: significantUnits), "1000000")
     }
 
     func testMillions() {
         let nf = ORNumberFormatter()
-        XCTAssertEqual(nf.stringValue(for: 0, significantUnits: .millions), "0")
-        XCTAssertEqual(nf.stringValue(for: 1, significantUnits: .millions), "0")
-        XCTAssertEqual(nf.stringValue(for: 1_000, significantUnits: .millions), "0")
-        XCTAssertEqual(nf.stringValue(for: 1_000_000, significantUnits: .millions), "1")
-        XCTAssertEqual(nf.stringValue(for: 1_000_000_000, significantUnits: .millions), "1000")
+        let significantUnits = ORNumberFormatter.SignificantUnits.millions
+        XCTAssertEqual(nf.stringValue(for: 0, significantUnits: significantUnits), "0")
+        XCTAssertEqual(nf.stringValue(for: 1, significantUnits: significantUnits), "0")
+        XCTAssertEqual(nf.stringValue(for: 999, significantUnits: significantUnits), "0")
+        XCTAssertEqual(nf.stringValue(for: 1_000, significantUnits: significantUnits), "0")
+        XCTAssertEqual(nf.stringValue(for: 999_999, significantUnits: significantUnits), "0.9")
+        XCTAssertEqual(nf.stringValue(for: 1_000_000, significantUnits: significantUnits), "1")
+        XCTAssertEqual(nf.stringValue(for: 999_999_999, significantUnits: significantUnits), "999.9")
+        XCTAssertEqual(nf.stringValue(for: 1_000_000_000, significantUnits: significantUnits), "1000")
     }
 
     func testBillions() {
         let nf = ORNumberFormatter()
-        XCTAssertEqual(nf.stringValue(for: 0, significantUnits: .billions), "0")
-        XCTAssertEqual(nf.stringValue(for: 1, significantUnits: .billions), "0")
-        XCTAssertEqual(nf.stringValue(for: 1_000, significantUnits: .billions), "0")
-        XCTAssertEqual(nf.stringValue(for: 1_000_000, significantUnits: .billions), "0")
-        XCTAssertEqual(nf.stringValue(for: 1_000_000_000, significantUnits: .billions), "1")
+        let significantUnits = ORNumberFormatter.SignificantUnits.billions
+        XCTAssertEqual(nf.stringValue(for: 0, significantUnits: significantUnits), "0")
+        XCTAssertEqual(nf.stringValue(for: 1, significantUnits: significantUnits), "0")
+        XCTAssertEqual(nf.stringValue(for: 999, significantUnits: significantUnits), "0")
+        XCTAssertEqual(nf.stringValue(for: 1_000, significantUnits: significantUnits), "0")
+        XCTAssertEqual(nf.stringValue(for: 999_999, significantUnits: significantUnits), "0")
+        XCTAssertEqual(nf.stringValue(for: 1_000_000, significantUnits: significantUnits), "0")
+        XCTAssertEqual(nf.stringValue(for: 999_999_999, significantUnits: significantUnits), "0.9")
+        XCTAssertEqual(nf.stringValue(for: 1_000_000_000, significantUnits: significantUnits), "1")
     }
     
     func testFractionDigits() {
@@ -67,5 +83,33 @@ class ORNumberFormatterTests: XCTestCase {
         XCTAssertEqual(nf.stringValue(for: 0.9, significantUnits: .none, maxFractionDigits: 2), "0.9")
         
         XCTAssertEqual(nf.stringValue(for: 0.99, significantUnits: .none, maxFractionDigits: 1), "0.9")
+    }
+    
+    func testAuto() {
+        let nf = ORNumberFormatter()
+        var res = nf.autoStringValue(for: 999)
+        XCTAssertEqual(res.strValue, "999")
+        XCTAssertEqual(res.significantUnits, ORNumberFormatter.SignificantUnits.none)
+        XCTAssertEqual(nf.autoStringValueWithUnits(for: 999), "999")
+
+        res = nf.autoStringValue(for: 999_999, maxFractionDigits: 0)
+        XCTAssertEqual(res.strValue, "999")
+        XCTAssertEqual(res.significantUnits, ORNumberFormatter.SignificantUnits.thousands)
+        XCTAssertEqual(nf.autoStringValueWithUnits(for: 999_999, maxFractionDigits: 0), "999 K")
+
+        res = nf.autoStringValue(for: 999_999, maxFractionDigits: 1)
+        XCTAssertEqual(res.strValue, "999.9")
+        XCTAssertEqual(res.significantUnits, ORNumberFormatter.SignificantUnits.thousands)
+        XCTAssertEqual(nf.autoStringValueWithUnits(for: 999_999, maxFractionDigits: 1), "999.9 K")
+
+        res = nf.autoStringValue(for: 999_999_999, maxFractionDigits: 0)
+        XCTAssertEqual(res.strValue, "999")
+        XCTAssertEqual(res.significantUnits, ORNumberFormatter.SignificantUnits.millions)
+        XCTAssertEqual(nf.autoStringValueWithUnits(for: 999_999_999, maxFractionDigits: 0), "999 M")
+
+        res = nf.autoStringValue(for: 999_999_999, maxFractionDigits: 1)
+        XCTAssertEqual(res.strValue, "999.9")
+        XCTAssertEqual(res.significantUnits, ORNumberFormatter.SignificantUnits.millions)
+        XCTAssertEqual(nf.autoStringValueWithUnits(for: 999_999_999, maxFractionDigits: 1), "999.9 M")
     }
 }
