@@ -420,7 +420,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		09A570E90953B196FECD468FF184E665 /* Release */ = {
+		0FF066C2D2AAB2282751F8BB6BD5FDA3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 224CA4F92C19FCEDF16991DE09B508EB /* ORCommonCode-Swift.xcconfig */;
 			buildSettings = {
@@ -444,7 +444,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -545,6 +545,37 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		60B76581CA176CA7CB58EE72127F1B2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 224CA4F92C19FCEDF16991DE09B508EB /* ORCommonCode-Swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ORCommonCode-Swift/ORCommonCode-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ORCommonCode-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ORCommonCode-Swift/ORCommonCode-Swift.modulemap";
+				PRODUCT_NAME = ORCommonCode_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		7B62A85C412D689EF418FA67DA770A41 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -703,37 +734,6 @@
 			};
 			name = Debug;
 		};
-		F1831F2F11C6E650627ED8F42CB156BC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 224CA4F92C19FCEDF16991DE09B508EB /* ORCommonCode-Swift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ORCommonCode-Swift/ORCommonCode-Swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ORCommonCode-Swift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ORCommonCode-Swift/ORCommonCode-Swift.modulemap";
-				PRODUCT_NAME = ORCommonCode_Swift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -767,8 +767,8 @@
 		E9E847FFF9E093C9E736A24700DE50F5 /* Build configuration list for PBXNativeTarget "ORCommonCode-Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F1831F2F11C6E650627ED8F42CB156BC /* Debug */,
-				09A570E90953B196FECD468FF184E665 /* Release */,
+				60B76581CA176CA7CB58EE72127F1B2D /* Debug */,
+				0FF066C2D2AAB2282751F8BB6BD5FDA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

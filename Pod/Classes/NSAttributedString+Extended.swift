@@ -18,25 +18,25 @@ extension NSAttributedString {
         }
         paragraphStyle.alignment = textAlign
         paragraphStyle.lineSpacing = 0
-        var attr: [String : Any] = [NSParagraphStyleAttributeName: paragraphStyle]
+        var attr: [NSAttributedStringKey: Any] = [NSAttributedStringKey.paragraphStyle: paragraphStyle]
         if textColor != nil {
-            attr[NSForegroundColorAttributeName] = textColor!
+            attr[NSAttributedStringKey.foregroundColor] = textColor!
         }
         if font != nil {
-            attr[NSFontAttributeName] = font!
+            attr[NSAttributedStringKey.font] = font!
         }
         if tightenLineSpacing {
             paragraphStyle.maximumLineHeight = font!.pointSize
         }
         if kerningValue != nil {
-            attr[NSKernAttributeName] = kerningValue!
+            attr[NSAttributedStringKey.kern] = kerningValue!
         }
         
         let string = NSAttributedString(string: text, attributes: attr)
         return string
     }
     
-    @objc public static func or_attrStringWithHyperlinks(original: String, attributes: [String : AnyObject] = [:]) -> NSAttributedString {
+    @objc public static func or_attrStringWithHyperlinks(original: String, attributes: [NSAttributedStringKey: Any] = [:]) -> NSAttributedString {
         let matches = original.or_matchesForRegexInText("\\[(.*?)\\]")
         if ((matches.count % 2) != 0 || matches.count == 0) {
             return NSAttributedString()
@@ -56,7 +56,7 @@ extension NSAttributedString {
             result.append(normalText)
             
             let link = NSMutableAttributedString(string: text.or_withoutFirstAndLastChars())
-            link.addAttribute(NSLinkAttributeName, value: value.or_withoutFirstAndLastChars(), range: NSMakeRange(0, link.length))
+            link.addAttribute(NSAttributedStringKey.link, value: value.or_withoutFirstAndLastChars(), range: NSMakeRange(0, link.length))
             result.append(link)
         
             beginIndex = valueRange.location + valueRange.length
