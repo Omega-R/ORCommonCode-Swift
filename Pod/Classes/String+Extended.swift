@@ -10,9 +10,10 @@ import Foundation
 
 extension String {
     
+    @available(*, deprecated, message: "Please use String count property directly")
     public var or_length: Int {
         get {
-            return self.characters.count
+            return count
         }
     }
     
@@ -21,10 +22,10 @@ extension String {
                                  maxHeight: CGFloat = CGFloat.greatestFiniteMagnitude) -> CGSize {
         let fontAttributes = [NSAttributedStringKey.font: font]
         let maxSize: CGSize = CGSize(width: maxWidth, height: maxHeight)
-        let boundingRect: CGRect = self.boundingRect(with: maxSize,
-                                                     options: NSStringDrawingOptions.usesLineFragmentOrigin,
-                                                     attributes: fontAttributes,
-                                                     context: nil)
+        let boundingRect = self.boundingRect(with: maxSize,
+                                             options: NSStringDrawingOptions.usesLineFragmentOrigin,
+                                             attributes: fontAttributes,
+                                             context: nil)
         
         return boundingRect.size
     }
@@ -40,7 +41,7 @@ extension String {
     }
     
     public func or_isFileURL() -> Bool {
-        return self.or_matchesForRegexInText("^file:///").count > 0
+        return or_matchesForRegexInText("^file:///").count > 0
     }
     
     public func or_repeatingString(_ n:Int) -> String {
@@ -57,7 +58,7 @@ extension String {
     
     public mutating func or_appendToChain(_ other: String?, separator: String = " ") {
         guard let strToAdd = other else { return }
-        self = (self.or_length > 0) ? "\(self)\(separator)\(strToAdd)" : strToAdd
+        self = (count > 0) ? "\(self)\(separator)\(strToAdd)" : strToAdd
     }
     
     public func or_matchesForRegexInText(_ regex: String!) -> [NSTextCheckingResult] {
@@ -73,21 +74,20 @@ extension String {
     }
     
     public func or_withoutFirstAndLastChars() -> String {
-        let result = String(self.characters.dropFirst().dropLast())
+        let result = String(dropFirst().dropLast())
         return result
     }
     
     public func or_substring(range: NSRange) -> String {
-        let startIndex = self.characters.index(self.startIndex, offsetBy: range.location)
-        let endIndex = self.characters.index(self.startIndex, offsetBy: range.length)
-        let substringRange = startIndex ..< endIndex
+        let startIndex = index(self.startIndex, offsetBy: range.location)
+        let endIndex = index(self.startIndex, offsetBy: range.length)
         
-        let result = self.substring(with: substringRange)
+        let result = String(self[startIndex ..< endIndex])
         return result
     }
 
     public func or_withHttpIfNeeded() -> String {
-        if self.hasPrefix("http://") || self.hasPrefix("https://") {
+        if hasPrefix("http://") || hasPrefix("https://") {
             return self
         } else {
             return "http://" + self
@@ -95,13 +95,13 @@ extension String {
     }
     
     public func or_stringByAppendingString(_ str: String, withSeparatorIfNeeded sep: String) -> String {
-        return self.isEmpty ? str : self + sep + str
+        return isEmpty ? str : self + sep + str
     }
     
     public func or_phoneSymbolsOnlyString() -> String {
         var validationString = ""
         
-        for char in self.characters {
+        for char in self {
             switch char {
             case "0","1","2","3","4","5","6","7","8","9","-","+","(",")":
                 validationString.append(char)
