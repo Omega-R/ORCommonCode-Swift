@@ -20,7 +20,7 @@ extension String {
     public func or_estimatedSize(font: UIFont,
                                  maxWidth: CGFloat = CGFloat.greatestFiniteMagnitude,
                                  maxHeight: CGFloat = CGFloat.greatestFiniteMagnitude) -> CGSize {
-        let fontAttributes = [NSAttributedStringKey.font: font]
+        let fontAttributes = [NSAttributedString.Key.font: font]
         let maxSize: CGSize = CGSize(width: maxWidth, height: maxHeight)
         let boundingRect = self.boundingRect(with: maxSize,
                                              options: NSStringDrawingOptions.usesLineFragmentOrigin,
