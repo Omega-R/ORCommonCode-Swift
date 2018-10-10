@@ -50,7 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02715A39FFD33E3E5EC886D818961EA8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		02715A39FFD33E3E5EC886D818961EA8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		03F47F8F0C52F287DCEE0F09BAED00F1 /* ORCommonCode-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ORCommonCode-Swift-prefix.pch"; sourceTree = "<group>"; };
 		0456B9701D52C7F5FDDCE684C670E168 /* Pods-ORCommonCode-Swift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ORCommonCode-Swift_Example-dummy.m"; sourceTree = "<group>"; };
 		0B66DC2C534297D1FD219FA8E1850BFE /* Pods-ORCommonCode-Swift_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ORCommonCode-Swift_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -65,14 +65,14 @@
 		3665845659B003E0E7775EC6F9B9FCA8 /* Pods-ORCommonCode-Swift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ORCommonCode-Swift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		3D9DE6399E91A35CE51ACD29829FB6DC /* Dictionary+Extended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+Extended.swift"; path = "Pod/Classes/Dictionary+Extended.swift"; sourceTree = "<group>"; };
 		4301AC7A4A05E8D3F5FDCC3B3C25BBBB /* Pods-ORCommonCode-Swift_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ORCommonCode-Swift_Example-umbrella.h"; sourceTree = "<group>"; };
-		525CA24623ACB786DE03FC504D8B3997 /* Pods_ORCommonCode_Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ORCommonCode_Swift_Tests.framework; path = "Pods-ORCommonCode-Swift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		525CA24623ACB786DE03FC504D8B3997 /* Pods_ORCommonCode_Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ORCommonCode_Swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54AFD7CA0DBD9BECA1F61221359F357A /* Pods-ORCommonCode-Swift_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ORCommonCode-Swift_Example-resources.sh"; sourceTree = "<group>"; };
 		5601BD26F1862D62A51A0C4EEA8ABE98 /* Pods-ORCommonCode-Swift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ORCommonCode-Swift_Tests.modulemap"; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5AB8B19A615CE830EC2B327FBABDF299 /* Pods-ORCommonCode-Swift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ORCommonCode-Swift_Tests-umbrella.h"; sourceTree = "<group>"; };
 		60A9959157417322223616A00A8ADF47 /* NSAttributedString+Extended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSAttributedString+Extended.swift"; path = "Pod/Classes/NSAttributedString+Extended.swift"; sourceTree = "<group>"; };
 		61A7A4C61607AD057D823DF80EA51AE4 /* Pods-ORCommonCode-Swift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ORCommonCode-Swift_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		62C11572B47450C4FDE3392BCDD80E8B /* ORCommonCode_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ORCommonCode_Swift.framework; path = "ORCommonCode-Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		62C11572B47450C4FDE3392BCDD80E8B /* ORCommonCode_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ORCommonCode_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63210022BA0FE0A4A6C8214F49E04E6B /* String+Extended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extended.swift"; path = "Pod/Classes/String+Extended.swift"; sourceTree = "<group>"; };
 		6A56F90B7F51686C9423BAA2E7FB8FCC /* ORAppInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ORAppInfo.swift; path = Pod/Classes/ORAppInfo.swift; sourceTree = "<group>"; };
 		6D908FA287CF5CF0974B8024E509FB9E /* ORMath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ORMath.swift; path = Pod/Classes/ORMath.swift; sourceTree = "<group>"; };
@@ -83,17 +83,17 @@
 		7C38B5992AA61139B013C9F8FB30323D /* ORCommonCode-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "ORCommonCode-Swift.modulemap"; sourceTree = "<group>"; };
 		84ACAFBDD6C577C05D714154C92F7FB4 /* Array+Extended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Extended.swift"; path = "Pod/Classes/Array+Extended.swift"; sourceTree = "<group>"; };
 		89FC378CCA8DEEB2FD95D2432FB31546 /* Pods-ORCommonCode-Swift_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ORCommonCode-Swift_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		971211D49618A92B25AD8C81B8FD2256 /* TimeInterval+DurationComponents.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TimeInterval+DurationComponents.swift"; path = "Pod/Classes/TimeInterval+DurationComponents.swift"; sourceTree = "<group>"; };
 		9AC94DE326CE03ADC3F36B46F36BCCF0 /* Pods-ORCommonCode-Swift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ORCommonCode-Swift_Example-frameworks.sh"; sourceTree = "<group>"; };
-		AA13219F6BB8F6507BBB716EEF46381A /* Pods_ORCommonCode_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ORCommonCode_Swift_Example.framework; path = "Pods-ORCommonCode-Swift_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA13219F6BB8F6507BBB716EEF46381A /* Pods_ORCommonCode_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ORCommonCode_Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E3F694C9ED27A89F7D9946D2C60ACC /* Date+ISOString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+ISOString.swift"; path = "Pod/Classes/Date+ISOString.swift"; sourceTree = "<group>"; };
 		C4223ADCF8A29F5B71AC50F8258E6560 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C43BE1B6505AC1B5BD3BF2B0AF6DDC0F /* Pods-ORCommonCode-Swift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ORCommonCode-Swift_Example.modulemap"; sourceTree = "<group>"; };
 		CE2EF94F3BC5C9FCC610509B8A7A1134 /* ORNumberFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ORNumberFormatter.swift; path = Pod/Classes/ORNumberFormatter.swift; sourceTree = "<group>"; };
 		CE3C479CA6F920A1A9DA21DC1E0951F8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D589F3CA8546F9FB5A40B73796B56066 /* ORCommonCode-Swift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = "ORCommonCode-Swift.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		DBC648F88C9550B42F8D8944EFB58007 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		D589F3CA8546F9FB5A40B73796B56066 /* ORCommonCode-Swift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = "ORCommonCode-Swift.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		DBC648F88C9550B42F8D8944EFB58007 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E4B0D01E66DDE3FF2E47E189AE2328FD /* Pods-ORCommonCode-Swift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ORCommonCode-Swift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E4F79195EBAEE847FE7907F8C24C0A70 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F49984050B585B1FB6C247558F6DDAE2 /* Data+Extended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Extended.swift"; path = "Pod/Classes/Data+Extended.swift"; sourceTree = "<group>"; };
@@ -459,7 +459,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -561,7 +561,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
