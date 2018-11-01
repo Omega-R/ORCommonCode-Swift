@@ -9,7 +9,7 @@ import UIKit
 
 open class ORAppInfo: NSObject {
 
-    open static var name: String {
+    public static var name: String {
         if let text = Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String {
             return text
         }
@@ -18,12 +18,12 @@ open class ORAppInfo: NSObject {
         return text
     }
 
-    open static var appVersion: String {
+    public static var appVersion: String {
         let text = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? ""
         return text
     }
 
-    open static var updateDate: Date {
+    public static var updateDate: Date {
         guard let resPath = Bundle.main.resourcePath else {
             return Date()
         }
@@ -34,7 +34,7 @@ open class ORAppInfo: NSObject {
         return modificationDate
     }
 
-    open static func updateDate(fileName: String) -> Date {
+    public static func updateDate(fileName: String) -> Date {
         guard let resPath = Bundle.main.resourcePath else {
             return Date()
         }
@@ -45,7 +45,7 @@ open class ORAppInfo: NSObject {
         return modificationDate
     }
 
-    open static var size: UInt64 {
+    public static var size: UInt64 {
         let bundlePath = Bundle.main.bundlePath
         let bundleArray = try! FileManager.default.subpathsOfDirectory(atPath: bundlePath)
         var totalSize: UInt64 = 0

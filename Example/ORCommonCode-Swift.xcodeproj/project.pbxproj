@@ -32,7 +32,7 @@
 
 /* Begin PBXFileReference section */
 		0462B52A5B5BE6CDD627830F /* Pods-ORCommonCode-Swift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORCommonCode-Swift_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ORCommonCode-Swift_Tests/Pods-ORCommonCode-Swift_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		150C5082A370ED6C607CF134 /* ORCommonCode-Swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "ORCommonCode-Swift.podspec"; path = "../ORCommonCode-Swift.podspec"; sourceTree = "<group>"; };
+		150C5082A370ED6C607CF134 /* ORCommonCode-Swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "ORCommonCode-Swift.podspec"; path = "../ORCommonCode-Swift.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2C2328F8B59E6B8FE2713028 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3D8A6757C70006E70FDEAA1D /* Pods-ORCommonCode-Swift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORCommonCode-Swift_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ORCommonCode-Swift_Example/Pods-ORCommonCode-Swift_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		403519CFA0E85B0D3AE2E247 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
