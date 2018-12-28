@@ -61,19 +61,24 @@ open class ORNumberFormatter {
         
         if maxFractionDigits > 0 {
             let floatPart = value - Double(intPart)
-            let floatPartBoundedByMaxFractionDigits = Int(floatPart * pow(10.0, Double(maxFractionDigits)))
+            let floatPartBoundedByMaxFractionDigits = Int(round(floatPart * pow(10.0, Double(maxFractionDigits))))
             if floatPartBoundedByMaxFractionDigits > 0 {
-                var strValueFloatPart = String(format: "%\(maxFractionDigits)d", floatPartBoundedByMaxFractionDigits)
+                var strValueFloatPart = "\(floatPartBoundedByMaxFractionDigits)"
+                
+                let prefixZerosCount = maxFractionDigits - strValueFloatPart.count
+                let prefixZeros = String(repeating: "0", count: prefixZerosCount)
+                
                 if removeTrailingFractionZeros {
                     while strValueFloatPart.hasSuffix("0") {
                         strValueFloatPart.remove(at: strValueFloatPart.index(before: strValueFloatPart.endIndex))
                     }
                 }
+                
                 let separator = useCommaAsSeparator ? "," : "."
-                s.append("\(separator)\(strValueFloatPart)")
+                s.append("\(separator)\(prefixZeros)\(strValueFloatPart)")
             }
         }
-
+        
         return s
     }
     
