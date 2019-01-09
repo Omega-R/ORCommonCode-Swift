@@ -55,8 +55,4 @@ import UIKit
         let distance = hypot(a.x - b.x, a.y - b.y)
         return distance
     }
-    
-    public static func clamp<T: Comparable>(_ value: T, _ lower: T, _ upper: T) -> T {
-        return min(max(value, lower), upper)
-    }
 }
