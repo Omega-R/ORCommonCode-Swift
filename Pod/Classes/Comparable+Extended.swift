@@ -7,7 +7,7 @@
 
 extension Comparable {
     
-    func clamp(_ lower: Self, _ upper: Self) -> Self {
+    public func clamp(_ lower: Self, _ upper: Self) -> Self {
         return min(max(self, lower), upper)
     }
 }
