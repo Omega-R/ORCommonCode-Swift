@@ -8,7 +8,11 @@
 public struct ORJailbreakChecker {
     
     public static func isDeviceJailbroken() -> Bool {
-        return isFoundJailbreakFiles() || isFoundJailbrokenReadWritePermissions() || isFoundJailbreakSymlinks()
+        #if targetEnvironment(simulator)
+            return false
+        #else
+            return isFoundJailbreakFiles() || isFoundJailbrokenReadWritePermissions() || isFoundJailbreakSymlinks()
+        #endif
     }
     
     private static func isFoundJailbreakFiles() -> Bool {
