@@ -18,6 +18,8 @@
 		827E16803C1592067E9CB9D9963D5040 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		8BFDFA2BD9286AA86E5BFB728DCCAAD6 /* String+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A2B62D822FA1B80DCCEEB8FD56710 /* String+Extended.swift */; };
 		96B009043025910B5A38C6F44C3C3D2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		A4E4975423DF536A0078A5D2 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E4975323DF536A0078A5D2 /* CoreServices.framework */; };
+		A4E4975623DF60EE0078A5D2 /* Int+MinMax.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4975523DF60EE0078A5D2 /* Int+MinMax.swift */; };
 		AF125C9A62B4649D601C47468DD5B8F9 /* ORMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9632E7DA9871476AD2CEE638C99ABD5A /* ORMath.swift */; };
 		B2D9183972BA2C4D628D60F3B5F69129 /* TimeInterval+DurationComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED53424E5E2BEAACC1B6489F19AAF65F /* TimeInterval+DurationComponents.swift */; };
 		BA2B9559E699686BA043EABD92CF4EBB /* Dictionary+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE87F1FAC7E292FE199C9125977DC /* Dictionary+Extended.swift */; };
@@ -63,15 +65,15 @@
 		2B4CE508171EFCDB8DFABE659A098A49 /* Pods-ORCommonCode-Swift_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ORCommonCode-Swift_Tests-resources.sh"; sourceTree = "<group>"; };
 		3665845659B003E0E7775EC6F9B9FCA8 /* Pods-ORCommonCode-Swift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ORCommonCode-Swift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		4301AC7A4A05E8D3F5FDCC3B3C25BBBB /* Pods-ORCommonCode-Swift_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ORCommonCode-Swift_Example-umbrella.h"; sourceTree = "<group>"; };
-		525CA24623ACB786DE03FC504D8B3997 /* Pods_ORCommonCode_Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ORCommonCode_Swift_Tests.framework; path = "Pods-ORCommonCode-Swift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		525CA24623ACB786DE03FC504D8B3997 /* Pods_ORCommonCode_Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ORCommonCode_Swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54AFD7CA0DBD9BECA1F61221359F357A /* Pods-ORCommonCode-Swift_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ORCommonCode-Swift_Example-resources.sh"; sourceTree = "<group>"; };
 		5601BD26F1862D62A51A0C4EEA8ABE98 /* Pods-ORCommonCode-Swift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ORCommonCode-Swift_Tests.modulemap"; sourceTree = "<group>"; };
-		5667AEB729917F51823BCBCAD921413D /* ORCommonCode-Swift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = "ORCommonCode-Swift.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5667AEB729917F51823BCBCAD921413D /* ORCommonCode-Swift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = "ORCommonCode-Swift.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5AB8B19A615CE830EC2B327FBABDF299 /* Pods-ORCommonCode-Swift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ORCommonCode-Swift_Tests-umbrella.h"; sourceTree = "<group>"; };
 		5CDFF755CA4AB3FB5117D2E0F9BC19A2 /* ORCommonCode-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "ORCommonCode-Swift.modulemap"; sourceTree = "<group>"; };
 		61A7A4C61607AD057D823DF80EA51AE4 /* Pods-ORCommonCode-Swift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ORCommonCode-Swift_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		62C11572B47450C4FDE3392BCDD80E8B /* ORCommonCode_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ORCommonCode_Swift.framework; path = "ORCommonCode-Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		62C11572B47450C4FDE3392BCDD80E8B /* ORCommonCode_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ORCommonCode_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EBAA0727A8F99B54B8AFD774BEC761 /* ORAppInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ORAppInfo.swift; path = Pod/Classes/ORAppInfo.swift; sourceTree = "<group>"; };
 		7062CA1C871B8C47C42AB4F14759883C /* Pods-ORCommonCode-Swift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ORCommonCode-Swift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		70E9AB444D7D8F055F1DEC754EDBFA83 /* ORCommonCode-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ORCommonCode-Swift-umbrella.h"; sourceTree = "<group>"; };
@@ -79,12 +81,14 @@
 		7C33379125F28D7162A3997C02AA1734 /* Pods-ORCommonCode-Swift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ORCommonCode-Swift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7CF8BA6F75B017CC73ADB209E3090156 /* ORNumberFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ORNumberFormatter.swift; path = Pod/Classes/ORNumberFormatter.swift; sourceTree = "<group>"; };
 		89FC378CCA8DEEB2FD95D2432FB31546 /* Pods-ORCommonCode-Swift_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ORCommonCode-Swift_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9632E7DA9871476AD2CEE638C99ABD5A /* ORMath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ORMath.swift; path = Pod/Classes/ORMath.swift; sourceTree = "<group>"; };
 		97BDD7A5F6CC8DB1A9E6354331BF4ED1 /* Date+UTC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+UTC.swift"; path = "Pod/Classes/Date+UTC.swift"; sourceTree = "<group>"; };
 		9A9C031D7785B785A296A657291A3FC6 /* Array+Extended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Extended.swift"; path = "Pod/Classes/Array+Extended.swift"; sourceTree = "<group>"; };
 		9AC94DE326CE03ADC3F36B46F36BCCF0 /* Pods-ORCommonCode-Swift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ORCommonCode-Swift_Example-frameworks.sh"; sourceTree = "<group>"; };
-		AA13219F6BB8F6507BBB716EEF46381A /* Pods_ORCommonCode_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ORCommonCode_Swift_Example.framework; path = "Pods-ORCommonCode-Swift_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4E4975323DF536A0078A5D2 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		A4E4975523DF60EE0078A5D2 /* Int+MinMax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+MinMax.swift"; sourceTree = "<group>"; };
+		AA13219F6BB8F6507BBB716EEF46381A /* Pods_ORCommonCode_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ORCommonCode_Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE2ECB4C3DC30B1A43E21ECF2DE4988 /* ORJailbreakChecker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ORJailbreakChecker.swift; path = Pod/Classes/ORJailbreakChecker.swift; sourceTree = "<group>"; };
 		AD7E2BA8F360415DEBF69542BC94781D /* Date+ISOString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+ISOString.swift"; path = "Pod/Classes/Date+ISOString.swift"; sourceTree = "<group>"; };
 		AF874C4E05F01133BFC47530FE42586D /* Data+Extended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Extended.swift"; path = "Pod/Classes/Data+Extended.swift"; sourceTree = "<group>"; };
@@ -92,7 +96,7 @@
 		B6404AE4904E6A4BF9FC1AF164A044B9 /* ORNotifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ORNotifications.swift; path = Pod/Classes/ORNotifications.swift; sourceTree = "<group>"; };
 		C38A2B62D822FA1B80DCCEEB8FD56710 /* String+Extended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extended.swift"; path = "Pod/Classes/String+Extended.swift"; sourceTree = "<group>"; };
 		C43BE1B6505AC1B5BD3BF2B0AF6DDC0F /* Pods-ORCommonCode-Swift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ORCommonCode-Swift_Example.modulemap"; sourceTree = "<group>"; };
-		CB2E89BEBB498FE20B27E6FC9626B5F2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		CB2E89BEBB498FE20B27E6FC9626B5F2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CD0E3CB1A450372D88A3DADF656E6471 /* ORCommonCode-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ORCommonCode-Swift-prefix.pch"; sourceTree = "<group>"; };
 		CE3C479CA6F920A1A9DA21DC1E0951F8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2E77279DB952CC2B48FE1E9D0621FDE /* ORCommonCode-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ORCommonCode-Swift.xcconfig"; sourceTree = "<group>"; };
@@ -100,7 +104,7 @@
 		E4B0D01E66DDE3FF2E47E189AE2328FD /* Pods-ORCommonCode-Swift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ORCommonCode-Swift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E4CBE87F1FAC7E292FE199C9125977DC /* Dictionary+Extended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+Extended.swift"; path = "Pod/Classes/Dictionary+Extended.swift"; sourceTree = "<group>"; };
 		E4F79195EBAEE847FE7907F8C24C0A70 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7285217FB8F85F89A4606103C735AEA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		E7285217FB8F85F89A4606103C735AEA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		ED53424E5E2BEAACC1B6489F19AAF65F /* TimeInterval+DurationComponents.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TimeInterval+DurationComponents.swift"; path = "Pod/Classes/TimeInterval+DurationComponents.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +122,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				827E16803C1592067E9CB9D9963D5040 /* Foundation.framework in Frameworks */,
+				A4E4975423DF536A0078A5D2 /* CoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +234,7 @@
 				7CF8BA6F75B017CC73ADB209E3090156 /* ORNumberFormatter.swift */,
 				C38A2B62D822FA1B80DCCEEB8FD56710 /* String+Extended.swift */,
 				ED53424E5E2BEAACC1B6489F19AAF65F /* TimeInterval+DurationComponents.swift */,
+				A4E4975523DF60EE0078A5D2 /* Int+MinMax.swift */,
 				DBCB1EB6C12B45798B886BFF82A6D336 /* Pod */,
 				58E9E1A64DBC78812101D23FB33E471B /* Support Files */,
 			);
@@ -249,6 +255,7 @@
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A4E4975323DF536A0078A5D2 /* CoreServices.framework */,
 				5E0D919E635D23B70123790B8308F8EF /* iOS */,
 			);
 			name = Frameworks;
@@ -372,6 +379,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
@@ -428,6 +436,7 @@
 				D518D4ACAADC6B153EEFD8D7B47A9517 /* Data+Extended.swift in Sources */,
 				DA51EE42A2AA8226856722D7A2E6B6BE /* Date+ISOString.swift in Sources */,
 				C22922D73E0A4C850DF0CFF8D83AAB45 /* Date+UTC.swift in Sources */,
+				A4E4975623DF60EE0078A5D2 /* Int+MinMax.swift in Sources */,
 				BA2B9559E699686BA043EABD92CF4EBB /* Dictionary+Extended.swift in Sources */,
 				3C42112C111EEF6D618477DFC319A534 /* NSAttributedString+Extended.swift in Sources */,
 				F6EF408B583C98DB0DF3C5742E0B26E7 /* ORAppInfo.swift in Sources */,
@@ -496,8 +505,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -523,6 +531,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 5.0.1;
 				MODULEMAP_FILE = "Target Support Files/ORCommonCode-Swift/ORCommonCode-Swift.modulemap";
 				PRODUCT_MODULE_NAME = ORCommonCode_Swift;
 				PRODUCT_NAME = ORCommonCode_Swift;
@@ -628,8 +637,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -749,14 +757,14 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 5.0.1;
 				MODULEMAP_FILE = "Target Support Files/ORCommonCode-Swift/ORCommonCode-Swift.modulemap";
 				PRODUCT_MODULE_NAME = ORCommonCode_Swift;
 				PRODUCT_NAME = ORCommonCode_Swift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

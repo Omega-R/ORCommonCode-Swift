@@ -10,7 +10,12 @@ import Foundation
 
 extension String {
     
-    @available(*, deprecated, message: "Please use String count property directly")
+    static var or_unique: String {
+        let uuid: String = UUID().uuidString;
+        return uuid.trimmingCharacters(in: CharacterSet(charactersIn: "-"));
+    }
+    
+    @available(*, obsoleted: 5.0.2, message: "Please use String count property directly")
     public var or_length: Int {
         get {
             return count
@@ -30,14 +35,34 @@ extension String {
         return boundingRect.size
     }
     
+    @available(*, obsoleted: 5.0.2, message: "Please use String.or_unique instead")
     public static func or_uniqueString() -> String {
-        let uuid: String = UUID().uuidString;
-        
-        return uuid.trimmingCharacters(in: CharacterSet(charactersIn: "-"));
+        return String.or_unique
     }
     
+    @available(*, obsoleted: 5.0.2, message: "Please use self.or_localized(_:, defaultLocale:) instead")
     public static func or_localized(_ keyStr: String) -> String {
         return NSLocalizedString(keyStr, comment: "")
+    }
+    
+    func or_localized(_ locale: Locale! = nil, defaultLocale: Locale) -> String {
+        let usingLocale = locale ?? defaultLocale
+        let resourseName = usingLocale.languageCode ?? usingLocale.identifier.replacingOccurrences(of: "_", with: "-")
+        
+        var path = Bundle.main.path(forResource: resourseName, ofType: "lproj")
+        
+        if path == nil || !FileManager.default.fileExists(atPath: path!) {
+            let resourseName = defaultLocale.languageCode ?? defaultLocale.identifier.replacingOccurrences(of: "_", with: "-")
+            path = Bundle.main.path(forResource: resourseName, ofType: "lproj")
+        }
+        
+        if let path = path, let languageBundle = Bundle(path: path) {
+            return languageBundle.localizedString(forKey: self, value: self, table: nil)
+        } else {
+            assertionFailure("Bundle for default locale doesn't exist")
+        }
+        
+        return self
     }
     
     public func or_isFileURL() -> Bool {
@@ -56,9 +81,23 @@ extension String {
         return result
     }
     
+    @available(*, obsoleted: 5.0.2, renamed: "or_chain")
     public mutating func or_appendToChain(_ other: String?, separator: String = " ") {
+        or_append(other, separator: separator)
+    }
+    
+    public mutating func or_append(_ other: String?, separator: String = " ") {
         guard let strToAdd = other else { return }
         self = (count > 0) ? "\(self)\(separator)\(strToAdd)" : strToAdd
+    }
+    
+    @available(*, obsoleted: 5.0.2, renamed: "or_byAppendingString")
+    public func or_stringByAppendingString(_ str: String, withSeparatorIfNeeded sep: String) -> String {
+        return or_byAppendingString(str, withSeparatorIfNeeded: sep)
+    }
+    
+    public func or_byAppendingString(_ str: String, withSeparatorIfNeeded sep: String) -> String {
+        return isEmpty ? str : self + sep + str
     }
     
     public func or_matchesForRegexInText(_ regex: String!) -> [NSTextCheckingResult] {
@@ -92,10 +131,6 @@ extension String {
         } else {
             return "http://" + self
         }
-    }
-    
-    public func or_stringByAppendingString(_ str: String, withSeparatorIfNeeded sep: String) -> String {
-        return isEmpty ? str : self + sep + str
     }
     
     public func or_phoneSymbolsOnlyString() -> String {

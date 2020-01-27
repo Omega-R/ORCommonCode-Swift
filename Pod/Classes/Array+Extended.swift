@@ -10,11 +10,14 @@ import Foundation
 
 extension Array {
     
-    public func or_limitedBySize(_ size: Int) -> [Element] {
+    public func or_limitedBySize(_ size: Int, discardingTail: Bool = true) -> [Element] {
         if (self.count <= size) {
             return self
-        } else {
+        } else if discardingTail {
             return Array(self[0..<size])
+        } else {
+            let startIndex = count - size
+            return Array(self[startIndex..<count])
         }
     }
 }

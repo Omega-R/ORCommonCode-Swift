@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreServices
 
 extension NSAttributedString {
     
@@ -66,5 +67,59 @@ extension NSAttributedString {
         
         result.addAttributes(attributes, range: NSMakeRange(0, result.length))
         return result
+    }
+    
+    func or_insertIcon(_ icon: UIImage, byReplacingCharactersIn range: NSRange) {
+        
+        let mutStr = self.mutableCopy() as! NSMutableAttributedString
+        
+        let attributes: [NSAttributedString.Key : Any]
+        
+        if range.location < self.length {
+            attributes = self.attributes(at: range.location, effectiveRange: nil)
+        } else {
+            attributes = self.attributes(at: 0, effectiveRange: nil)
+        }
+        
+        let fontSize = (attributes[.font] as! UIFont?)?.pointSize ?? 17.0
+        let aspectRatio = icon.size.width / icon.size.height
+        
+        let iconAttachment = NSTextAttachment(data: icon.pngData(), ofType: kUTTypePNG as String)
+        iconAttachment.bounds = CGRect(origin: .zero, size: CGSize(width: fontSize * aspectRatio, height: fontSize))
+        
+        let iconStr = NSAttributedString(attachment: iconAttachment)
+    
+        if range.location < self.length {
+            mutStr.replaceCharacters(in: range, with: iconStr)
+        } else {
+            mutStr.append(iconStr)
+        }
+    }
+    
+    static func or_buildFromComponents(_ components: [Any], with attributes: [NSAttributedString.Key : Any]) -> NSAttributedString {
+        return components
+            .compactMap({ comp -> NSAttributedString? in
+                switch comp {
+                case let str as String:
+                    let aStr = NSAttributedString(string: str, attributes: attributes)
+                    return aStr
+                case let str as NSAttributedString:
+                    return str
+                case let img as UIImage:
+                    let fontSize = (attributes[.font] as! UIFont?)?.pointSize ?? 17.0
+                    let aspectRatio = img.size.width / img.size.height
+                    let iconAttachment = NSTextAttachment(data: img.pngData(), ofType: kUTTypePNG as String)
+                    iconAttachment.bounds = CGRect(origin: .zero, size: CGSize(width: fontSize * aspectRatio, height: fontSize))
+                    
+                    return NSAttributedString(attachment: iconAttachment)
+                default:
+                    return nil
+                }
+            })
+            .reduce(NSMutableAttributedString(), { (str, part) -> NSMutableAttributedString in
+                str.append(part)
+                return str
+            })
+            .copy() as! NSAttributedString
     }
 }

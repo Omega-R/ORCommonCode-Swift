@@ -38,7 +38,7 @@ import UIKit
     /**
      @param t: 0.0 - 1.0
      */
-    @objc public static func lerp(_ a: CGFloat, _ b: CGFloat, _ t: CGFloat) -> CGFloat {
+    public static func lerp<Num: Numeric>(_ a: Num, _ b: Num, _ t: Num) -> Num {
         let res = (a + (b - a) * t)
         return res
     }
@@ -46,12 +46,12 @@ import UIKit
     /**
      @param t: 0.0 - 1.0
      */
-    @objc public static func cerp(_ a: CGFloat, _ b: CGFloat, _ t: CGFloat) -> CGFloat {
-        let res = (a + (b - a) * pow(t, 3))
+    public static func cerp<Num: Numeric>(_ a: Num, _ b: Num, _ t: Num) -> Num {
+        let res = (a + (b - a) * t * t * t)
         return res
     }
     
-    @objc public static func distance(_ a: CGPoint, _ b: CGPoint) -> CGFloat {
+    public static func distance(_ a: CGPoint, _ b: CGPoint) -> CGFloat {
         let distance = hypot(a.x - b.x, a.y - b.y)
         return distance
     }
