@@ -9,7 +9,7 @@
 import Foundation
 
 
-@available(*, obsoleted: 5.0.2, message: "Seems completely covered by DateComponents and DateComponentsFormatter")
+@available(*, message: "Seems completely covered by DateComponents and DateComponentsFormatter")
 extension TimeInterval {
     
     public func or_timeComponents() -> (days: Int, hours: Int, minutes: Int, seconds: Int, milliseconds: Int) {

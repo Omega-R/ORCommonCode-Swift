@@ -15,7 +15,7 @@ extension String {
         return uuid.trimmingCharacters(in: CharacterSet(charactersIn: "-"));
     }
     
-    @available(*, obsoleted: 5.0.2, message: "Please use String count property directly")
+    @available(swift, obsoleted: 5.0, message: "Please use String count property directly")
     public var or_length: Int {
         get {
             return count
@@ -35,12 +35,12 @@ extension String {
         return boundingRect.size
     }
     
-    @available(*, obsoleted: 5.0.2, message: "Please use String.or_unique instead")
+    @available(swift, obsoleted: 5.0, message: "Please use String.or_unique instead")
     public static func or_uniqueString() -> String {
         return String.or_unique
     }
     
-    @available(*, obsoleted: 5.0.2, message: "Please use self.or_localized(_:, defaultLocale:) instead")
+    @available(swift, obsoleted: 5.0, message: "Please use self.or_localized(_:, defaultLocale:) instead")
     public static func or_localized(_ keyStr: String) -> String {
         return NSLocalizedString(keyStr, comment: "")
     }
@@ -81,7 +81,7 @@ extension String {
         return result
     }
     
-    @available(*, obsoleted: 5.0.2, renamed: "or_chain")
+    @available(swift, obsoleted: 5.0, renamed: "or_chain")
     public mutating func or_appendToChain(_ other: String?, separator: String = " ") {
         or_append(other, separator: separator)
     }
@@ -91,7 +91,7 @@ extension String {
         self = (count > 0) ? "\(self)\(separator)\(strToAdd)" : strToAdd
     }
     
-    @available(*, obsoleted: 5.0.2, renamed: "or_byAppendingString")
+    @available(swift, obsoleted: 5.0, renamed: "or_byAppendingString")
     public func or_stringByAppendingString(_ str: String, withSeparatorIfNeeded sep: String) -> String {
         return or_byAppendingString(str, withSeparatorIfNeeded: sep)
     }
