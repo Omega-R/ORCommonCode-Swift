@@ -1,16 +1,27 @@
 PODS:
-  - ORCommonCode-Swift (5.0.0)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - ORCommonCode-Swift (0.1.0)
 
 DEPENDENCIES:
+  - FBSnapshotTestCase (~> 2.1.4)
   - ORCommonCode-Swift (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
 
 EXTERNAL SOURCES:
   ORCommonCode-Swift:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ORCommonCode-Swift: a8e81000750aa0e63eb5df4c91f24f6dc0c2635b
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  ORCommonCode-Swift: e61de228c9b32bc75455b23916119b89d6cc9a3d
 
-PODFILE CHECKSUM: 374edf3b8be301eccb086e6e768afae63da48c19
+PODFILE CHECKSUM: 37a2da8439f37a803e10d6f9178c63174945c126
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.3

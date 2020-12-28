@@ -1,6 +1,11 @@
 # ORCommonCode-Swift
 
-## Usage
+[![CI Status](https://img.shields.io/travis/Egor%20Lindberg/ORCommonCode-Swift.svg?style=flat)](https://travis-ci.org/Egor%20Lindberg/ORCommonCode-Swift)
+[![Version](https://img.shields.io/cocoapods/v/ORCommonCode-Swift.svg?style=flat)](https://cocoapods.org/pods/ORCommonCode-Swift)
+[![License](https://img.shields.io/cocoapods/l/ORCommonCode-Swift.svg?style=flat)](https://cocoapods.org/pods/ORCommonCode-Swift)
+[![Platform](https://img.shields.io/cocoapods/p/ORCommonCode-Swift.svg?style=flat)](https://cocoapods.org/pods/ORCommonCode-Swift)
+
+## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
@@ -8,16 +13,16 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-ORCommonCode-Swift is available through [CocoaPods](http://cocoapods.org). To install
+ORCommonCode-Swift is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "ORCommonCode-Swift"
+pod 'ORCommonCode-Swift'
 ```
 
 ## Author
 
-Maxim Soloviev, maxim@omega-r.com
+Egor Lindberg, egor-lindberg@omega-r.com
 
 ## License
 

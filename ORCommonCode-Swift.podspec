@@ -3,37 +3,40 @@
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
+# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
 #
 
 Pod::Spec.new do |s|
-  s.name             = "ORCommonCode-Swift"
-  s.version          = "5.0.0"
-  s.summary          = "ORCommonCode-Swift - extensions, helpers."
+  s.name             = 'ORCommonCode-Swift'
+  s.version          = '1.0.0'
+  s.summary          = 'ORCommonCode-Swift by Omega.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = "String+Extended, Array+Extended, NSAttributedString+Extended, Date+ISOString, Date+UTC, TimeInterval+DurationComponents, dispatching and notification helpers, ORMath, ORAppInfo, etc."
+#   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.homepage         = "https://bitbucket.org/omegarinc/orcommoncode-swift"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
-  s.license          = 'MIT'
-  s.author           = { "Maxim Soloviev" => "maxim@omega-r.com" }
-  s.source           = { :git => "https://bitbucket.org/omegarinc/orcommoncode-swift.git", :tag => s.version.to_s }
+  s.description      = <<-DESC
+'This is ORCommonCode-Swift library by Omega.'
+                       DESC
+
+  s.homepage         = 'https://github.com/Omega-R/ORCommonCode-Swift'
+  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.author           = { 'Egor Lindberg' => 'egor.lindberg@omega-r.com' }
+  s.source           = { :git => 'https://github.com/Omega-R/ORCommonCode-Swift.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.platform     = :ios, '8.0'
-  s.requires_arc = true
+  s.ios.deployment_target = '10.0'
 
-  s.source_files = 'Pod/Classes/**/*'
+  s.source_files = 'Sources/ORCommonCode-Swift/Classes/**/*'
+  
   # s.resource_bundles = {
-  #   'ORCommonCode-Swift' => ['Pod/Assets/*.png']
+  #   'ORCommonCode-Swift' => ['ORCommonCode-Swift/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'Foundation'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'UIKit', 'Foundation'
+  s.dependency 'CoreServices'
 end

@@ -1,21 +1,22 @@
 {
   "name": "ORCommonCode-Swift",
-  "version": "5.0.0",
-  "summary": "ORCommonCode-Swift - extensions, helpers.",
-  "description": "String+Extended, Array+Extended, NSAttributedString+Extended, Date+ISOString, Date+UTC, TimeInterval+DurationComponents, dispatching and notification helpers, ORMath, ORAppInfo, etc.",
-  "homepage": "https://bitbucket.org/omegarinc/orcommoncode-swift",
-  "license": "MIT",
+  "version": "0.1.0",
+  "summary": "A short description of ORCommonCode-Swift.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Egor Lindberg/ORCommonCode-Swift",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
   "authors": {
-    "Maxim Soloviev": "maxim@omega-r.com"
+    "Egor Lindberg": "egor-lindberg@omega-r.com"
   },
   "source": {
-    "git": "https://bitbucket.org/omegarinc/orcommoncode-swift.git",
-    "tag": "5.0.0"
+    "git": "https://github.com/Egor Lindberg/ORCommonCode-Swift.git",
+    "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "requires_arc": true,
-  "source_files": "Pod/Classes/**/*",
-  "frameworks": "Foundation"
+  "source_files": "ORCommonCode-Swift/Classes/**/*"
 }
