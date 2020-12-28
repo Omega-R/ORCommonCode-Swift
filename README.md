@@ -22,7 +22,7 @@ pod 'ORCommonCode-Swift'
 
 ## Author
 
-Egor Lindberg, egor-lindberg@omega-r.com
+Egor Lindberg, egor.lindberg@omega-r.com
 
 ## License
 

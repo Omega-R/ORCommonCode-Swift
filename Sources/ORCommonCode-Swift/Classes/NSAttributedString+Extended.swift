@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import CoreServices
+import UIKit
+import MobileCoreServices
 
 extension NSAttributedString {
     

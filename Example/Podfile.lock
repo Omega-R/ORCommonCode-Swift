@@ -4,7 +4,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - ORCommonCode-Swift (0.1.0)
+  - ORCommonCode-Swift (1.0.0)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
@@ -20,8 +20,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  ORCommonCode-Swift: e61de228c9b32bc75455b23916119b89d6cc9a3d
+  ORCommonCode-Swift: 62e137b3f3162108af32610c9e1cc9c7d47d2610
 
-PODFILE CHECKSUM: 37a2da8439f37a803e10d6f9178c63174945c126
+PODFILE CHECKSUM: da71d5f565bd04bfefd3d535f836212b5b75eed9
 
 COCOAPODS: 1.8.3

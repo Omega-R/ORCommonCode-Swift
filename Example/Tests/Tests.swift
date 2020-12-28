@@ -1,5 +1,5 @@
 import XCTest
-import ORCommonCode-Swift
+import ORCommonCode_Swift
 
 class Tests: XCTestCase {
     
