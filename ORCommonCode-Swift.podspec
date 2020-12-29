@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ORCommonCode-Swift'
-  s.version          = '6.0.01'
+  s.version          = '6.0.1'
   s.summary          = 'ORCommonCode-Swift by Omega.'
 
 # This description is used to generate tags and improve search results.
