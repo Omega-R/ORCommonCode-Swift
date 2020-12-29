@@ -5,6 +5,8 @@
 //  Created by Sergey Aleksandrov on 09/01/2019.
 //
 
+import UIKit
+
 public struct ORJailbreakChecker {
     
     public static func isDeviceJailbroken() -> Bool {

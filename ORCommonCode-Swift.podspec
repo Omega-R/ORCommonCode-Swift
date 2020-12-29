@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ORCommonCode-Swift'
-  s.version          = '6.0.0'
+  s.version          = '6.0.01'
   s.summary          = 'ORCommonCode-Swift by Omega.'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/Omega-R/ORCommonCode-Swift.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '9.0'
   s.swift_version = '5.0'
 
   s.source_files = 'Sources/ORCommonCode-Swift/Classes/**/*'

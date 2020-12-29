@@ -4,7 +4,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - ORCommonCode-Swift (1.0.0)
+  - ORCommonCode-Swift (6.0.0)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
@@ -20,7 +20,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  ORCommonCode-Swift: 62e137b3f3162108af32610c9e1cc9c7d47d2610
+  ORCommonCode-Swift: ddb75e920e39fa2d29be71a68ef982d3a1d0d39c
 
 PODFILE CHECKSUM: da71d5f565bd04bfefd3d535f836212b5b75eed9
 
